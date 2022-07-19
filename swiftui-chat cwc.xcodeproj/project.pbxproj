@@ -20,6 +20,7 @@
 		5ACCA2852880BDAE009C121D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACCA2842880BDAE009C121D /* FirebaseStorage */; };
 		5ACCA2872880BDAE009C121D /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACCA2862880BDAE009C121D /* FirebaseStorageSwift-Beta */; };
 		5ACCA2892881F852009C121D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2882881F852009C121D /* AppDelegate.swift */; };
+		5ACCA28C28870C6A009C121D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA28B28870C6A009C121D /* AuthViewModel.swift */; };
 		5ADEE81F2875DB2900457A5B /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */; };
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
@@ -37,6 +38,7 @@
 		5ACCA27B2880B468009C121D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5ACCA2882881F852009C121D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACCA28A288637CB009C121D /* swiftui-chat cwc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swiftui-chat cwc.entitlements"; sourceTree = "<group>"; };
+		5ACCA28B28870C6A009C121D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
 		5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		5A50A7802873690A001AF7E7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5ACCA28B28870C6A009C121D /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				5ACCA2892881F852009C121D /* AppDelegate.swift in Sources */,
 				5A55FA07287B532B00D16C06 /* CustomTabBar.swift in Sources */,
 				5A50A774287368D1001AF7E7 /* RootView.swift in Sources */,
+				5ACCA28C28870C6A009C121D /* AuthViewModel.swift in Sources */,
 				5A50A772287368D1001AF7E7 /* swiftui_chat_cwcApp.swift in Sources */,
 				5ACCA27A287F7817009C121D /* TabBarButton.swift in Sources */,
 				5ADEE82428761D7A00457A5B /* Fonts .swift in Sources */,
