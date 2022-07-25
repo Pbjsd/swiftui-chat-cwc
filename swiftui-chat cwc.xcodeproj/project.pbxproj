@@ -28,6 +28,7 @@
 		5ACCA2992889BB26009C121D /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2982889BB26009C121D /* SyncContactsView.swift */; };
 		5ACCA29B2889C2BD009C121D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA29A2889C2BD009C121D /* WelcomeView.swift */; };
 		5ACCA29D288C6CC6009C121D /* OnboardingButtonStyle .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA29C288C6CC6009C121D /* OnboardingButtonStyle .swift */; };
+		5ACCA2A1288E5593009C121D /* CreateProfileTextfieldStyle .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A0288E5593009C121D /* CreateProfileTextfieldStyle .swift */; };
 		5ADEE81F2875DB2900457A5B /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */; };
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
@@ -53,6 +54,7 @@
 		5ACCA2982889BB26009C121D /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
 		5ACCA29A2889C2BD009C121D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		5ACCA29C288C6CC6009C121D /* OnboardingButtonStyle .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingButtonStyle .swift"; sourceTree = "<group>"; };
+		5ACCA2A0288E5593009C121D /* CreateProfileTextfieldStyle .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProfileTextfieldStyle .swift"; sourceTree = "<group>"; };
 		5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
 		5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				5ADEE82328761D7A00457A5B /* Fonts .swift */,
 				5ACCA29C288C6CC6009C121D /* OnboardingButtonStyle .swift */,
+				5ACCA2A0288E5593009C121D /* CreateProfileTextfieldStyle .swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				5A50A772287368D1001AF7E7 /* swiftui_chat_cwcApp.swift in Sources */,
 				5ACCA2952889BB04009C121D /* VerificationView.swift in Sources */,
 				5ACCA29D288C6CC6009C121D /* OnboardingButtonStyle .swift in Sources */,
+				5ACCA2A1288E5593009C121D /* CreateProfileTextfieldStyle .swift in Sources */,
 				5ACCA27A287F7817009C121D /* TabBarButton.swift in Sources */,
 				5ADEE82428761D7A00457A5B /* Fonts .swift in Sources */,
 			);

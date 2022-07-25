@@ -34,6 +34,7 @@ struct PhoneNumberView: View {
                 
                 HStack {
                     TextField("e.g. +1 613 515 0123", text: $phoneNumber)
+                        .font(Font.bodyParagraph)
                     
                     Spacer()
                     

@@ -34,6 +34,7 @@ struct VerificationView: View {
                 
                 HStack {
                     TextField("", text: $verificationcode)
+                        .font(Font.bodyParagraph)
                     
                     Spacer()
                     

@@ -26,6 +26,8 @@ struct CreateProfileView: View {
                 .font(Font.bodyParagraph)
                 .padding(.top, 12)
             
+            Spacer()
+            
             // Profile image button
             Button {
                 
@@ -39,15 +41,27 @@ struct CreateProfileView: View {
                         .foregroundColor(Color.white)
                     
                     Circle()
-                        .stroke("create-profile-border", lineWidth: 2)
+                        .stroke(Color("create-profile-border"), lineWidth: 2)
+                    
+                    Image(systemName: "camera.fill")
+                        .tint(Color("icons-input"))
+                    
                 }
+                .frame(width: 134, height: 134)
+                
             }
 
+            Spacer()
             
             // First name
+                TextField("First Name", text: $firstName)
+                .textFieldStyle(CreateProfileTextfieldStyle())
+            
+            }
             
             // Last name
-            
+            TextField("Last Name", text: $firstName)
+                .textFieldStyle(CreateProfileTextfieldStyle())
             
             Spacer()
             
@@ -62,13 +76,14 @@ struct CreateProfileView: View {
             .buttonStyle(OnboardingButtonStyle())
             .padding(.bottom, 87)
             
+        
             }
-        .padding(.horizontal)
+            .padding(.horizontal)
+    
     }
-}
 
 struct CreateProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateProfileView()
+        CreateProfileView(currentStep: .constant(.profile))
     }
 }
