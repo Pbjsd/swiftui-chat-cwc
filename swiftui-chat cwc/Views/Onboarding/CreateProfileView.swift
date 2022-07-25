@@ -57,7 +57,6 @@ struct CreateProfileView: View {
                 TextField("First Name", text: $firstName)
                 .textFieldStyle(CreateProfileTextfieldStyle())
             
-            }
             
             // Last name
             TextField("Last Name", text: $firstName)
@@ -86,4 +85,6 @@ struct CreateProfileView_Previews: PreviewProvider {
     static var previews: some View {
         CreateProfileView(currentStep: .constant(.profile))
     }
+}
+    
 }
