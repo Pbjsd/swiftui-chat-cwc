@@ -29,6 +29,9 @@
 		5ACCA29B2889C2BD009C121D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA29A2889C2BD009C121D /* WelcomeView.swift */; };
 		5ACCA29D288C6CC6009C121D /* OnboardingButtonStyle .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA29C288C6CC6009C121D /* OnboardingButtonStyle .swift */; };
 		5ACCA2A1288E5593009C121D /* CreateProfileTextfieldStyle .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A0288E5593009C121D /* CreateProfileTextfieldStyle .swift */; };
+		5ACCA2A328904A3B009C121D /* ContactsViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A228904A3B009C121D /* ContactsViewModel .swift */; };
+		5ACCA2A528986342009C121D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A428986342009C121D /* User.swift */; };
+		5ACCA2A728A01EDD009C121D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A628A01EDD009C121D /* DatabaseService.swift */; };
 		5ADEE81F2875DB2900457A5B /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */; };
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
@@ -55,6 +58,9 @@
 		5ACCA29A2889C2BD009C121D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		5ACCA29C288C6CC6009C121D /* OnboardingButtonStyle .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingButtonStyle .swift"; sourceTree = "<group>"; };
 		5ACCA2A0288E5593009C121D /* CreateProfileTextfieldStyle .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProfileTextfieldStyle .swift"; sourceTree = "<group>"; };
+		5ACCA2A228904A3B009C121D /* ContactsViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsViewModel .swift"; sourceTree = "<group>"; };
+		5ACCA2A428986342009C121D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5ACCA2A628A01EDD009C121D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
 		5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5ACCA28B28870C6A009C121D /* AuthViewModel.swift */,
+				5ACCA2A228904A3B009C121D /* ContactsViewModel .swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 		5A50A78128736927001AF7E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5ACCA2A428986342009C121D /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 		5A50A78228736932001AF7E7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5ACCA2A628A01EDD009C121D /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACCA2A728A01EDD009C121D /* DatabaseService.swift in Sources */,
 				5ACCA2992889BB26009C121D /* SyncContactsView.swift in Sources */,
 				5ACCA28F28887953009C121D /* OnboardingContainerView.swift in Sources */,
 				5ACCA2892881F852009C121D /* AppDelegate.swift in Sources */,
@@ -287,6 +297,7 @@
 				5A50A774287368D1001AF7E7 /* RootView.swift in Sources */,
 				5ACCA28C28870C6A009C121D /* AuthViewModel.swift in Sources */,
 				5ACCA2972889BB14009C121D /* CreateProfileView.swift in Sources */,
+				5ACCA2A528986342009C121D /* User.swift in Sources */,
 				5ACCA29B2889C2BD009C121D /* WelcomeView.swift in Sources */,
 				5ACCA2932889BAF6009C121D /* PhoneNumberView.swift in Sources */,
 				5A50A772287368D1001AF7E7 /* swiftui_chat_cwcApp.swift in Sources */,
@@ -294,6 +305,7 @@
 				5ACCA29D288C6CC6009C121D /* OnboardingButtonStyle .swift in Sources */,
 				5ACCA2A1288E5593009C121D /* CreateProfileTextfieldStyle .swift in Sources */,
 				5ACCA27A287F7817009C121D /* TabBarButton.swift in Sources */,
+				5ACCA2A328904A3B009C121D /* ContactsViewModel .swift in Sources */,
 				5ADEE82428761D7A00457A5B /* Fonts .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
