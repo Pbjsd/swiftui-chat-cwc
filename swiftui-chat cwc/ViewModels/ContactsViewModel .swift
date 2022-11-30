@@ -10,6 +10,8 @@ import Contacts
 
 class ContactsViewModel: ObservableObject {
     
+    @Published var users = [User]()
+    
     private var localContacts = [CNContact]()
     
     func getLocalContacts() {
@@ -38,7 +40,16 @@ class ContactsViewModel: ObservableObject {
                     
                 })
                 
-                // TODO: See which local contacts are actually users of this app 
+                // See which local contacts are actually users of this app
+                DatabaseService().getPlatformUsers(localContacts: self.localContacts) { platformUsers in
+                    
+                    // Update the UI in the main thread
+                    DispatchQueue.main.async {
+                        
+                        // Set the fetched users to the published users property
+                        self.users = platformUsers
+                    }
+                }
                 
             }
             catch {

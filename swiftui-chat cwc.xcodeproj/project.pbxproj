@@ -32,6 +32,7 @@
 		5ACCA2A328904A3B009C121D /* ContactsViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A228904A3B009C121D /* ContactsViewModel .swift */; };
 		5ACCA2A528986342009C121D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A428986342009C121D /* User.swift */; };
 		5ACCA2A728A01EDD009C121D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A628A01EDD009C121D /* DatabaseService.swift */; };
+		5ACCA2A9291C4A0F009C121D /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A8291C4A0F009C121D /* TextHelper.swift */; };
 		5ADEE81F2875DB2900457A5B /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */; };
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
@@ -61,6 +62,7 @@
 		5ACCA2A228904A3B009C121D /* ContactsViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsViewModel .swift"; sourceTree = "<group>"; };
 		5ACCA2A428986342009C121D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5ACCA2A628A01EDD009C121D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		5ACCA2A8291C4A0F009C121D /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 		5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
 		5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				5ADEE82328761D7A00457A5B /* Fonts .swift */,
 				5ACCA29C288C6CC6009C121D /* OnboardingButtonStyle .swift */,
 				5ACCA2A0288E5593009C121D /* CreateProfileTextfieldStyle .swift */,
+				5ACCA2A8291C4A0F009C121D /* TextHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				5ACCA2992889BB26009C121D /* SyncContactsView.swift in Sources */,
 				5ACCA28F28887953009C121D /* OnboardingContainerView.swift in Sources */,
 				5ACCA2892881F852009C121D /* AppDelegate.swift in Sources */,
+				5ACCA2A9291C4A0F009C121D /* TextHelper.swift in Sources */,
 				5A55FA07287B532B00D16C06 /* CustomTabBar.swift in Sources */,
 				5A50A774287368D1001AF7E7 /* RootView.swift in Sources */,
 				5ACCA28C28870C6A009C121D /* AuthViewModel.swift in Sources */,
