@@ -59,6 +59,8 @@ struct CustomTabBar: View {
             
             Button {
                 // New chat
+                // TODO: This is not going to be the permanent home for logout
+                AuthViewModel.logout()
             } label: {
                 
                 VStack (alignment: .center, spacing: 4) {
