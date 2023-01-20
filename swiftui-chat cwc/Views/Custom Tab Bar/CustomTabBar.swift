@@ -29,30 +29,6 @@ struct CustomTabBar: View {
                 TabBarButton(buttonText: "Chats",
                              imageName: "bubble.left",
                              isActive: selectedTab == .chats)
- // this code no longer needed- refer to Lesson 4: Creating a Custom Tab bar 
-//                GeometryReader { geo in
-//
-//                    if selectedTab == .chats {
-//                        Rectangle()
-//                            .foregroundColor(.blue)
-//                            .frame(width: geo.size.width/2, height: 4)
-//                            .padding(.leading, geo.size.width/4)
-//                    }
-//
-//
-//                    VStack (alignment: .center, spacing: 4) {
-//
-//                        Image(systemName: "bubble.left")
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(width: 24, height: 24)
-//
-//                        Text("Chats")
-//                            .font(Font.tabBar)
-//                    }
-//                    .frame(width: geo.size.width, height: geo.size.height)
-//
-//                }
                 
             }
             .tint(Color("icons-secondary"))

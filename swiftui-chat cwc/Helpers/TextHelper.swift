@@ -16,6 +16,7 @@ class TextHelper {
             .replacingOccurrences(of: ")", with: "")
             .replacingOccurrences(of: "-", with: "")
             .replacingOccurrences(of: " ", with: "")
+            .replacingOccurrences(of: "+", with: "")
     }
     
     // https://stackoverflow.com/questions/56476007/swiftui-textfield-max-length
