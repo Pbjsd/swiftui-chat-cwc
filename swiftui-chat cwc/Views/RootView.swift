@@ -12,19 +12,29 @@ struct RootView: View {
     @State var selectedTab: Tabs = .contacts
     
     @State var isOnboarding =
-        !AuthViewModel.isUserLoggedIn()
+    !AuthViewModel.isUserLoggedIn()
     
     var body: some View {
         
-        VStack {
+        ZStack {
             
-        Text("Hello, world!")
-                .padding()
-                .font(Font.chatHeading)
+            Color("background")
+                .ignoresSafeArea()
             
-            Spacer()
-       
-            CustomTabBar(selectedTab: $selectedTab)
+            VStack {
+                
+                switch selectedTab {
+                    
+                case .chats:
+                    ChatsListView()
+                case .contacts:
+                    ContactsListView()
+                }
+                
+                Spacer()
+                
+                CustomTabBar(selectedTab: $selectedTab)
+            }
         }
         .fullScreenCover(isPresented: $isOnboarding) {
             // On dismiss
@@ -32,10 +42,10 @@ struct RootView: View {
             // The onboarding sequence
             OnboardingContainerView(isOnboarding: $isOnboarding)
         }
-
+        
         
     }
-
+    
 }
 
 struct RootView_Previews: PreviewProvider {

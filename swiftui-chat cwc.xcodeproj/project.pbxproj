@@ -34,6 +34,8 @@
 		5ACCA2A728A01EDD009C121D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A628A01EDD009C121D /* DatabaseService.swift */; };
 		5ACCA2A9291C4A0F009C121D /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2A8291C4A0F009C121D /* TextHelper.swift */; };
 		5ACCA2AB29425A4A009C121D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2AA29425A4A009C121D /* ImagePicker.swift */; };
+		5ACCA2AF297C8CDD009C121D /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2AE297C8CDD009C121D /* ContactsListView.swift */; };
+		5ACCA2B1297C8DC0009C121D /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2B0297C8DC0009C121D /* ChatsListView.swift */; };
 		5ADEE81F2875DB2900457A5B /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */; };
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
@@ -65,6 +67,8 @@
 		5ACCA2A628A01EDD009C121D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		5ACCA2A8291C4A0F009C121D /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 		5ACCA2AA29425A4A009C121D /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5ACCA2AE297C8CDD009C121D /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
+		5ACCA2B0297C8DC0009C121D /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
 		5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
 		5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -135,9 +139,11 @@
 		5A50A77F287368ED001AF7E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5ACCA28D2888792A009C121D /* Onboarding */,
-				5A55FA05287B52EF00D16C06 /* Custom Tab Bar */,
 				5A50A773287368D1001AF7E7 /* RootView.swift */,
+				5ACCA28D2888792A009C121D /* Onboarding */,
+				5ACCA2AD297C8C17009C121D /* Chats View */,
+				5ACCA2AC297C8C02009C121D /* Contacts View */,
+				5A55FA05287B52EF00D16C06 /* Custom Tab Bar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +215,22 @@
 				5ACCA2982889BB26009C121D /* SyncContactsView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5ACCA2AC297C8C02009C121D /* Contacts View */ = {
+			isa = PBXGroup;
+			children = (
+				5ACCA2AE297C8CDD009C121D /* ContactsListView.swift */,
+			);
+			path = "Contacts View";
+			sourceTree = "<group>";
+		};
+		5ACCA2AD297C8C17009C121D /* Chats View */ = {
+			isa = PBXGroup;
+			children = (
+				5ACCA2B0297C8DC0009C121D /* ChatsListView.swift */,
+			);
+			path = "Chats View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +325,7 @@
 				5A55FA07287B532B00D16C06 /* CustomTabBar.swift in Sources */,
 				5A50A774287368D1001AF7E7 /* RootView.swift in Sources */,
 				5ACCA28C28870C6A009C121D /* AuthViewModel.swift in Sources */,
+				5ACCA2B1297C8DC0009C121D /* ChatsListView.swift in Sources */,
 				5ACCA2972889BB14009C121D /* CreateProfileView.swift in Sources */,
 				5ACCA2A528986342009C121D /* User.swift in Sources */,
 				5ACCA29B2889C2BD009C121D /* WelcomeView.swift in Sources */,
@@ -311,6 +334,7 @@
 				5ACCA2952889BB04009C121D /* VerificationView.swift in Sources */,
 				5ACCA29D288C6CC6009C121D /* OnboardingButtonStyle .swift in Sources */,
 				5ACCA2A1288E5593009C121D /* CreateProfileTextfieldStyle .swift in Sources */,
+				5ACCA2AF297C8CDD009C121D /* ContactsListView.swift in Sources */,
 				5ACCA27A287F7817009C121D /* TabBarButton.swift in Sources */,
 				5ACCA2AB29425A4A009C121D /* ImagePicker.swift in Sources */,
 				5ACCA2A328904A3B009C121D /* ContactsViewModel .swift in Sources */,
