@@ -36,6 +36,7 @@
 		5ACCA2AB29425A4A009C121D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2AA29425A4A009C121D /* ImagePicker.swift */; };
 		5ACCA2AF297C8CDD009C121D /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2AE297C8CDD009C121D /* ContactsListView.swift */; };
 		5ACCA2B1297C8DC0009C121D /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2B0297C8DC0009C121D /* ChatsListView.swift */; };
+		5ACCA2B3297F043E009C121D /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA2B2297F043E009C121D /* ContactRow.swift */; };
 		5ADEE81F2875DB2900457A5B /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */; };
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
@@ -69,6 +70,7 @@
 		5ACCA2AA29425A4A009C121D /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5ACCA2AE297C8CDD009C121D /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		5ACCA2B0297C8DC0009C121D /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
+		5ACCA2B2297F043E009C121D /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		5ADEE81C2875DB2900457A5B /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
 		5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				5ACCA2AE297C8CDD009C121D /* ContactsListView.swift */,
+				5ACCA2B2297F043E009C121D /* ContactRow.swift */,
 			);
 			path = "Contacts View";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				5A50A772287368D1001AF7E7 /* swiftui_chat_cwcApp.swift in Sources */,
 				5ACCA2952889BB04009C121D /* VerificationView.swift in Sources */,
 				5ACCA29D288C6CC6009C121D /* OnboardingButtonStyle .swift in Sources */,
+				5ACCA2B3297F043E009C121D /* ContactRow.swift in Sources */,
 				5ACCA2A1288E5593009C121D /* CreateProfileTextfieldStyle .swift in Sources */,
 				5ACCA2AF297C8CDD009C121D /* ContactsListView.swift in Sources */,
 				5ACCA27A287F7817009C121D /* TabBarButton.swift in Sources */,

@@ -31,6 +31,7 @@ struct ContactsListView: View {
                         .frame(width: 20, height: 20)
                         .tint(Color("icons-secondary"))
                 }
+                
             }
             .padding(.top, 20)
             
@@ -46,16 +47,25 @@ struct ContactsListView: View {
                     .padding()
             }
             .frame(height: 46)
+            .onChange(of: filterText) { _ in 
+                // Filter the results
+                contactsViewModel.filterContacts(filterBy:
+                                                    filterText.lowercased()
+                                                    .trimmingCharacters(in: .whitespacesAndNewlines))
+            }
             
-            if contactsViewModel.users.count > 0 {
+            if contactsViewModel.filteredUsers.count > 0 {
             
                 // List
-                List(contactsViewModel.users) { user in
+                List(contactsViewModel.filteredUsers) { user in
                     
-                    // TODO: Display rows
-                    Text(user.firstname ?? "Test User")
+                    // Display rows
+                    ContactRow(user: user)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
+                .padding(.top, 12)
             }
             else {
             
@@ -74,9 +84,9 @@ struct ContactsListView: View {
                 
                 Spacer()
                 
-        }
+            }
         
-    }
+        }
         .padding(.horizontal)
         .onAppear {
             contactsViewModel.getLocalContacts()
