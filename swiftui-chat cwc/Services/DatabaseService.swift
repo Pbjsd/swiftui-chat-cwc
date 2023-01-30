@@ -21,8 +21,7 @@ class DatabaseService {
         var lookupPhoneNumbers = localContacts.map { contact in
             
             // Turn the contact into a phone number as a string
-            return
-                TextHelper.sanitizePhoneNumber(contact.phoneNumbers.first?.value.stringValue ?? "")
+            return TextHelper.sanitizePhoneNumber(contact.phoneNumbers.first?.value.stringValue ?? "")
         }
         
         // Make sure that there are lookup numbers
@@ -87,8 +86,7 @@ class DatabaseService {
         }
         
         // Get user's phone number
-        let userPhone =
-            TextHelper.sanitizePhoneNumber(AuthViewModel.getLoggedInUserPhone())
+        let userPhone = TextHelper.sanitizePhoneNumber(AuthViewModel.getLoggedInUserPhone())
         
         // Get a reference to Firestore
         let db = Firestore.firestore()
@@ -183,10 +181,10 @@ class DatabaseService {
             // TODO: Look into using Result type to indicate failure vs profile exists
             completion(false)
             
-        }
+            }
         
-    }
+        }
     
-}
+    }
     
 }
