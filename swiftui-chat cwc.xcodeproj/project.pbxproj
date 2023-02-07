@@ -16,6 +16,7 @@
 		5AB204892989C0620073143D /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB204882989C0620073143D /* ProfilePicView.swift */; };
 		5AB2048B298C80BC0073143D /* RoundedCornerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2048A298C80BC0073143D /* RoundedCornerExtension.swift */; };
 		5AB2048D298F6A360073143D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2048C298F6A360073143D /* Chat.swift */; };
+		5AB2048F2992DC9F0073143D /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2048E2992DC9F0073143D /* ChatViewModel.swift */; };
 		5ACCA27A287F7817009C121D /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCA279287F7817009C121D /* TabBarButton.swift */; };
 		5ACCA27C2880B468009C121D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCA27B2880B468009C121D /* GoogleService-Info.plist */; };
 		5ACCA27F2880BDAE009C121D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5ACCA27E2880BDAE009C121D /* FirebaseAuth */; };
@@ -58,6 +59,7 @@
 		5AB204882989C0620073143D /* ProfilePicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
 		5AB2048A298C80BC0073143D /* RoundedCornerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerExtension.swift; sourceTree = "<group>"; };
 		5AB2048C298F6A360073143D /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		5AB2048E2992DC9F0073143D /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		5ACCA279287F7817009C121D /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		5ACCA27B2880B468009C121D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5ACCA2882881F852009C121D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				5ACCA28B28870C6A009C121D /* AuthViewModel.swift */,
 				5ACCA2A228904A3B009C121D /* ContactsViewModel .swift */,
+				5AB2048E2992DC9F0073143D /* ChatViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				5ACCA27A287F7817009C121D /* TabBarButton.swift in Sources */,
 				5ACCA2AB29425A4A009C121D /* ImagePicker.swift in Sources */,
 				5ACCA2A328904A3B009C121D /* ContactsViewModel .swift in Sources */,
+				5AB2048F2992DC9F0073143D /* ChatViewModel.swift in Sources */,
 				5AB2048D298F6A360073143D /* Chat.swift in Sources */,
 				5AB2048B298C80BC0073143D /* RoundedCornerExtension.swift in Sources */,
 				5ADEE82428761D7A00457A5B /* Fonts .swift in Sources */,

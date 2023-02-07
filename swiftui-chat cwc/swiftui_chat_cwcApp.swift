@@ -16,6 +16,7 @@ struct swiftui_chat_cwcApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(ContactsViewModel())
+                .environmentObject(ChatViewModel())
         }
     }
 }
