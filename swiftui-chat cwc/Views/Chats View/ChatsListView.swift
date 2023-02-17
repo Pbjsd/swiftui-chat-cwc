@@ -11,13 +11,28 @@ struct ChatsListView: View {
     
     @EnvironmentObject var chatViewModel: ChatViewModel
     
+    @Binding var isChatShowing: Bool
+    
     var body: some View {
         
         if chatViewModel.chats.count > 0 {
             
             List(chatViewModel.chats) { chat in
                 
-                Text(chat.id ?? "empty chat id")
+                Button {
+                    
+                    // Set selected chat for the chatviewmodel
+                    chatViewModel.selectedChat = chat
+                    
+                    // display conversation view
+                    isChatShowing = true
+                    
+                } label: {
+                    Text(chat.id ?? "empty chat id")
+                }
+
+                
+                
                 
             }
             
@@ -31,6 +46,6 @@ struct ChatsListView: View {
 
 struct ChatsListView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatsListView()
+        ChatsListView(isChatShowing: .constant(false))
     }
 }
