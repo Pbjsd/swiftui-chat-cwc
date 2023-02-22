@@ -46,6 +46,7 @@
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
 		5ADEE82428761D7A00457A5B /* Fonts .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEE82328761D7A00457A5B /* Fonts .swift */; };
+		5AEE22BD29A59116007C4704 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE22BC29A59116007C4704 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
 		5ADEE8222875E07B00457A5B /* swiftui-chat-cwc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "swiftui-chat-cwc-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5ADEE82328761D7A00457A5B /* Fonts .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts .swift"; sourceTree = "<group>"; };
+		5AEE22BC29A59116007C4704 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				5ACCA2A0288E5593009C121D /* CreateProfileTextfieldStyle .swift */,
 				5ACCA2A8291C4A0F009C121D /* TextHelper.swift */,
 				5AB2048A298C80BC0073143D /* RoundedCornerExtension.swift */,
+				5AEE22BC29A59116007C4704 /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				5ACCA2A728A01EDD009C121D /* DatabaseService.swift in Sources */,
 				5ACCA2992889BB26009C121D /* SyncContactsView.swift in Sources */,
 				5ACCA28F28887953009C121D /* OnboardingContainerView.swift in Sources */,
+				5AEE22BD29A59116007C4704 /* DateHelper.swift in Sources */,
 				5ACCA2892881F852009C121D /* AppDelegate.swift in Sources */,
 				5ACCA2A9291C4A0F009C121D /* TextHelper.swift in Sources */,
 				5A55FA07287B532B00D16C06 /* CustomTabBar.swift in Sources */,

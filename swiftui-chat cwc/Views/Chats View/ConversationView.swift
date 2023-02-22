@@ -65,7 +65,7 @@ struct ConversationView: View {
                             
                             if isFromUser {
                                 // Timestamp
-                                Text("9:41") 
+                                Text(DateHelper.chatTimestampFrom(date: msg.timestamp)) 
                                     .font(Font.smallText)
                                     .foregroundColor(Color("text-timestamp"))
                                     .padding(.trailing)
@@ -86,7 +86,7 @@ struct ConversationView: View {
                                 
                                 Spacer()
                                 
-                                Text("9:41")
+                                Text(DateHelper.chatTimestampFrom(date: msg.timestamp))
                                     .font(Font.smallText)
                                     .foregroundColor(Color("text-timestamp"))
                                     .padding(.leading)
@@ -149,8 +149,10 @@ struct ConversationView: View {
                         .padding(.trailing, 12)
                         
                         
+                        
                     }
                     .frame(height: 44)
+                    
                     
                     // Send button
                     Button {
@@ -179,6 +181,8 @@ struct ConversationView: View {
         .onAppear {
             // Call chat view model to retrieve all chat messages
             chatViewModel.getMessages()
+            
+            //
         }
         
         

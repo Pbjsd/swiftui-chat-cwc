@@ -270,8 +270,10 @@ class DatabaseService {
                 print("Error in database retrieval")
             }
             
-            
         }
+        
+        
+      
         
         
         
@@ -298,3 +300,4 @@ class DatabaseService {
                                 "timestamp": Date()])
     }
 }
+

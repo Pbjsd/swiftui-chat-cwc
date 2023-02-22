@@ -41,6 +41,7 @@ struct ChatsListView: View {
             Text("No chats")
         }
         
+        
     }
 }
 
