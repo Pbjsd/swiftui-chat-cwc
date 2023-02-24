@@ -200,7 +200,7 @@ class DatabaseService {
             .whereField("participantids",
                         arrayContains: AuthViewModel.getLoggedInUserId())
         
-        chatsQuery.getDocuments { snapshot, error in
+        let listener = chatsQuery.getDocuments { snapshot, error in
             
             if snapshot != nil && error == nil {
                 
@@ -241,9 +241,7 @@ class DatabaseService {
         let db = Firestore.firestore()
         
         // Create the query
-        let msgsQuery = db.collection("chats")
-            .document(chat.id!)
-            .collection("msgs")
+        let msgsQuery = db.collection("chats").document(chat.id!).collection("msgs")
             .order(by: "timestamp")
         
         // Perform the query
@@ -298,6 +296,22 @@ class DatabaseService {
                                 "msg": msg,
                                 "senderid": AuthViewModel.getLoggedInUserId(),
                                 "timestamp": Date()])
+    }
+    
+    func createChat(chat: Chat, completion: @escaping (String) -> Void) {
+        
+        // Get a reference to the database
+        let db = Firestore.firestore()
+        
+        // Create a document
+        let doc = db.collection("chats").document()
+        
+        // Set the data for the document
+        try? doc.setData(from: chat, completion: { error in
+            
+            // Communicate the document id 
+            completion(doc.documentID)
+        })
     }
 }
 

@@ -31,7 +31,7 @@ struct PhoneNumberView: View {
                 
                 Rectangle()
                     .frame(height: 56)
-                    .foregroundColor(Color("imput"))
+                    .foregroundColor(Color("input"))
                 
                 HStack {
                     TextField("e.g. +1 613 515 0123", text: $phoneNumber)
