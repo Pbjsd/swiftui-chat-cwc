@@ -9,10 +9,15 @@ import SwiftUI
 
 struct RootView: View {
     
+    // For detecting when the app state changes
+    @Environment(\.scenePhase) var scenePhase
+    
+    @EnvironmentObject var contactsViewModel: ContactsViewModel
+    @EnvironmentObject var chatViewModel: ChatViewModel
+    
     @State var selectedTab: Tabs = .contacts
     
-    @State var isOnboarding =
-    !AuthViewModel.isUserLoggedIn()
+    @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
     
     @State var isChatShowing = false
     
@@ -38,6 +43,12 @@ struct RootView: View {
                 CustomTabBar(selectedTab: $selectedTab)
             }
         }
+        .onAppear(perform: {
+            if !isOnboarding {
+                // User has already onboarded, load contacts
+                contactsViewModel.getLocalContacts()
+            }
+        })
         .fullScreenCover(isPresented: $isOnboarding) {
             // On dismiss
         } content: {
@@ -48,6 +59,17 @@ struct RootView: View {
             
             // The conversation view
             ConversationView(isChatShowing: $isChatShowing)
+        }
+        .onChange(of: scenePhase) { newPhase in
+            
+            if newPhase == .active {
+                print("Active")
+            } else if newPhase == .inactive {
+                print("Inactive")
+            } else if newPhase == .background {
+                print("Background")
+                chatViewModel.chatListViewCleanup()
+            }
         }
         
     }
