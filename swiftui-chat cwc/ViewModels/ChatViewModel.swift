@@ -24,6 +24,11 @@ class ChatViewModel: ObservableObject {
         getChats()
     }
     
+    func clearSelectedChat() {
+        self.selectedChat = nil
+        self.messages.removeAll()
+    }
+    
     func getChats() {
         
         // Use the database service to retrieve the chats
