@@ -159,6 +159,18 @@ struct ConversationView: View {
                                         
                                         Spacer()
                                     }
+                                    else if participants.count > 1 {
+                                        
+                                        // This is a group chat and not a message from the user
+                                        // Display profile photo
+                                        let userOfMsg = participants.filter { p in
+                                            p.id == msg.senderid
+                                        }.first
+                                        if let userOfMsg = userOfMsg {
+                                            ProfilePicView(user: userOfMsg)
+                                                .padding(.trailing, 16)
+                                        }
+                                    }
                                     
                                     if msg.imageurl != "" {
                                         // Photo Message
