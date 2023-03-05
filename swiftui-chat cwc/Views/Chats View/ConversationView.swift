@@ -181,8 +181,24 @@ struct ConversationView: View {
                                     }
                                     else {
                                         // Text Message
-                                        ConversationTextMessage(msg: msg.msg,
-                                                                isFromUser: isFromUser)
+                                        
+                                        // Determine if it's a group chat and a msg from another user
+                                        if participants.count > 1 && !isFromUser {
+                                            
+                                            let userOfMsg = participants.filter { p in
+                                                p.id == msg.senderid
+                                            }.first
+                                            
+                                            // Show a text msg with name
+                                            ConversationTextMessage(msg: msg.msg,
+                                                                    isFromUser: isFromUser,
+                                                                    name: "\(userOfMsg?.firstname ?? "") \(userOfMsg?.lastname ?? "")")
+                                        }
+                                        else {
+                                            // Text message with no name
+                                            ConversationTextMessage(msg: msg.msg,
+                                                                    isFromUser: isFromUser)
+                                        }
                                     }
                                     
                                     if !isFromUser {
