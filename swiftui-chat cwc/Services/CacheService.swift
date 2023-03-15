@@ -10,7 +10,7 @@ import SwiftUI
 
 class CacheService {
     
-    // Stores the Image componenets with URL string as key
+    // Stores the Image components with URL string as key
     private static var imageCache = [String : Image]()
     
     /// Return image for given key. Nil means image doesn't exist in cache

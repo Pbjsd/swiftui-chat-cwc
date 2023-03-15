@@ -22,7 +22,7 @@ struct PhoneNumberView: View {
                 .font(Font.titleText)
                 .padding(.top, 52)
             
-            Text("Enter your mobile number below. We'll send you a verification code after.")
+            Text("Enter your mobile number below. We’ll send you a verification code after.")
                 .font(Font.bodyParagraph)
                 .padding(.top, 12)
             
@@ -54,8 +54,8 @@ struct PhoneNumberView: View {
                     .frame(width: 19, height: 19)
                     .tint(Color("icons-input"))
                     
-                    
-                    
+                        
+                        
                 }
                 .padding()
                 
@@ -76,7 +76,7 @@ struct PhoneNumberView: View {
                         currentStep = .verification
                     }
                     else {
-                        // TODO: show an error 
+                        // TODO: show an error
                     }
                 }
                 
@@ -87,13 +87,14 @@ struct PhoneNumberView: View {
             }
             .buttonStyle(OnboardingButtonStyle())
             .padding(.bottom, 87)
+
             
-            }
+        }
         .padding(.horizontal)
         
-        }
-    
     }
+        
+}
 
 struct PhoneNumberView_Previews: PreviewProvider {
     static var previews: some View {

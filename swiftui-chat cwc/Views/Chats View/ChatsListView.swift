@@ -34,6 +34,7 @@ struct ChatsListView: View {
                         .tint(Color("icons-secondary"))
                 }
                 
+                
             }
             .padding(.top, 20)
             .padding(.horizontal)
@@ -45,7 +46,7 @@ struct ChatsListView: View {
                     
                     Button {
                         
-                        // Set selected chat for the chatviewmodel
+                        // Set selcted chat for the chatviewmodel
                         chatViewModel.selectedChat = chat
                         
                         // display conversation view
@@ -59,7 +60,7 @@ struct ChatsListView: View {
                     .buttonStyle(.plain)
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
-                
+
                 }
                 .listStyle(.plain)
                 
@@ -82,6 +83,7 @@ struct ChatsListView: View {
                 Spacer()
             }
         }
+        
         
         
         

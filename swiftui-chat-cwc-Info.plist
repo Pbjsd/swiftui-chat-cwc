@@ -19,7 +19,12 @@
 		<string>LexendDeca-Regular.ttf</string>
 		<string>LexendDeca-SemiBold.ttf</string>
 	</array>
-	<key>NSContactsUsageDescription</key>
-	<string>Sync your contacts to chat with them. </string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+		<key>UISceneConfigurations</key>
+		<dict/>
+	</dict>
 </dict>
 </plist>

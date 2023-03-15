@@ -58,10 +58,10 @@ struct CreateProfileView: View {
                         
                         Image(systemName: "camera.fill")
                             .tint(Color("icons-input"))
-                }
+                    }
                     
-                Circle()
-                    .stroke(Color("create-profile-border"), lineWidth: 2)
+                    Circle()
+                        .stroke(Color("create-profile-border"), lineWidth: 2)
                     
                 }
                 .frame(width: 134, height: 134)
@@ -71,10 +71,9 @@ struct CreateProfileView: View {
             Spacer()
             
             // First name
-                TextField("First Name", text: $firstName)
+            TextField("Given Name", text: $firstName)
                 .textFieldStyle(CreateProfileTextfieldStyle())
-            
-            
+                  
             // Last name
             TextField("Last Name", text: $lastName)
                 .textFieldStyle(CreateProfileTextfieldStyle())
@@ -83,8 +82,8 @@ struct CreateProfileView: View {
             
             Button {
                 
-                // TODO: Check that firstname/lastname fields are filled before allowing to save 
-              
+                // TODO: Check that firstname/lastname fields are filled before allowing to save
+                
                 // Prevent double taps
                 isSaveButtonDisabled = true
                 
@@ -101,50 +100,50 @@ struct CreateProfileView: View {
                     
                     isSaveButtonDisabled = false
                 }
-          
+                
             } label: {
                 Text(isSaveButtonDisabled ? "Uploading" : "Save")
             }
             .buttonStyle(OnboardingButtonStyle())
             .disabled(isSaveButtonDisabled)
             .padding(.bottom, 87)
+
             
-        
-          }
-            .padding(.horizontal)
-            .confirmationDialog("From where?", isPresented: $isSourceMenuShowing, actions: {
+        }
+        .padding(.horizontal)
+        .confirmationDialog("From where?", isPresented: $isSourceMenuShowing, actions: {
+            
+            Button {
+                // Set the source to photo library
+                self.source = .photoLibrary
                 
+                // Show the image picker
+                isPickerShowing = true
+                
+            } label: {
+                Text("Photo Library")
+            }
+
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            
                 Button {
-                    // Set the source to photo library
-                    self.source = .photoLibrary
+                    // Set the source to camera
+                    self.source = .camera
                     
                     // Show the image picker
                     isPickerShowing = true
-                    
                 } label: {
-                    Text("Photo Library")
+                    Text("Take Photo")
                 }
-                
-                if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                
-                    Button {
-                        // Set the source to camera
-                        self.source = .camera
-                        
-                        // Show the image picker
-                        isPickerShowing = true
-                    } label: {
-                        Text("Take Photo")
-                    }
-                }
+            }
 
-                
-            })
-            .sheet(isPresented: $isPickerShowing) {
-                
-                // Show the image picker
-                ImagePicker(selectedImage: $selectedImage,
-                            isPickerShowing: $isPickerShowing, source: self.source)
+            
+        })
+        .sheet(isPresented: $isPickerShowing) {
+            
+            // Show the image picker
+            ImagePicker(selectedImage: $selectedImage,
+                        isPickerShowing: $isPickerShowing, source: self.source)
         }
         
     }
@@ -155,5 +154,4 @@ struct CreateProfileView_Previews: PreviewProvider {
         CreateProfileView(currentStep: .constant(.profile))
     }
 }
-    
 

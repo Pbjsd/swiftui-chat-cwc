@@ -13,6 +13,7 @@ struct SyncContactsView: View {
     
     @Binding var isOnboarding: Bool
     
+    
     var body: some View {
         
         VStack {
@@ -34,7 +35,7 @@ struct SyncContactsView: View {
             Button {
                 // End onboarding
                 isOnboarding = false
-               
+                
             } label: {
                 
                 Text("Continue")
@@ -42,7 +43,7 @@ struct SyncContactsView: View {
             }
             .buttonStyle(OnboardingButtonStyle())
             .padding(.bottom, 87)
-            
+
             
         }
         .padding(.horizontal)

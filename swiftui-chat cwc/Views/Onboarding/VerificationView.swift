@@ -11,7 +11,7 @@ import Combine
 struct VerificationView: View {
     
     @Binding var currentStep: OnboardingStep
-    @Binding var isOnboarding: Bool 
+    @Binding var isOnboarding: Bool
     
     @State var verificationcode = ""
     
@@ -32,7 +32,7 @@ struct VerificationView: View {
                 
                 Rectangle()
                     .frame(height: 56)
-                    .foregroundColor(Color("imput"))
+                    .foregroundColor(Color("input"))
                 
                 HStack {
                     TextField("", text: $verificationcode)
@@ -53,8 +53,8 @@ struct VerificationView: View {
                     .frame(width: 19, height: 19)
                     .tint(Color("icons-input"))
                     
-                    
-                    
+                        
+                        
                 }
                 .padding()
                 
@@ -95,15 +95,16 @@ struct VerificationView: View {
             }
             .buttonStyle(OnboardingButtonStyle())
             .padding(.bottom, 87)
+
             
-            }
+        }
         .padding(.horizontal)
+        
     }
 }
 
 struct VerificationView_Previews: PreviewProvider {
     static var previews: some View {
-        VerificationView(currentStep:
-                .constant(.verification), isOnboarding: .constant(true))
+        VerificationView(currentStep: .constant(.verification), isOnboarding: .constant(true))
     }
 }

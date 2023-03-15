@@ -17,6 +17,7 @@ struct TabBarButton: View {
         
         GeometryReader { geo in
             
+            
             if isActive {
                 Rectangle()
                     .foregroundColor(.blue)
@@ -38,6 +39,7 @@ struct TabBarButton: View {
             .frame(width: geo.size.width, height: geo.size.height)
             
         }
+        
     }
 }
 

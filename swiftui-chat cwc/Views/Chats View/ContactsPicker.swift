@@ -35,6 +35,7 @@ struct ContactsPicker: View {
                         ZStack {
                             ContactRow(user: user)
                                 
+                            
                             HStack {
                                 Spacer()
                                 
@@ -60,13 +61,14 @@ struct ContactsPicker: View {
                                             selectedContacts.append(user)
                                         }
                                         else {
-                                            // TODO: Show message to say limit reached 
+                                            // TODO: Show message to say limit reached
                                         }
                                     }
                                     
                                 } label: {
                                     
-                                    Image(systemName: isSelectedContact ? "checkmark.circle.fill" : "checkmark.circle")
+                                    Image(systemName: isSelectedContact ? "checkmark.circle.fill" :
+                                            "checkmark.circle")
                                         .resizable()
                                         .foregroundColor(Color("button-primary"))
                                         .frame(width: 25, height: 25)
@@ -80,7 +82,7 @@ struct ContactsPicker: View {
                 }
                 
                 Button {
-                    // Done. Dismiss the contact picker
+                    // Done. Dimiss the contact picker
                     isContactsPickerShowing = false
                     
                 } label: {
@@ -94,15 +96,15 @@ struct ContactsPicker: View {
                     }
                 }
                 .frame(height: 56)
-                
+
                 
             }
+            
         }
         .onAppear {
-            // Clear any filters 
+            // Clear any filters
             contactsViewModel.filterContacts(filterBy: "")
         }
     }
 }
-
 

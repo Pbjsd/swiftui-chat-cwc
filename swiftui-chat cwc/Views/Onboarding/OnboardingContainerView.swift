@@ -18,7 +18,7 @@ enum OnboardingStep: Int {
 
 struct OnboardingContainerView: View {
     
-    @Binding var isOnboarding: Bool 
+    @Binding var isOnboarding: Bool
     
     @State var currentStep: OnboardingStep = .welcome
     
@@ -46,12 +46,13 @@ struct OnboardingContainerView: View {
             case .contacts:
                 SyncContactsView(isOnboarding: $isOnboarding)
             }
+            
         }
-    
+        
     }
 }
 
-struct OnboardingContainverView_Previews: PreviewProvider {
+struct OnboardingContainerView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingContainerView(isOnboarding: .constant(true))
     }

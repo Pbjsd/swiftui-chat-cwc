@@ -50,7 +50,7 @@ struct ContactsListView: View {
                     .padding()
             }
             .frame(height: 46)
-            .onChange(of: filterText) { _ in 
+            .onChange(of: filterText) { _ in
                 // Filter the results
                 contactsViewModel.filterContacts(filterBy:
                                                     filterText.lowercased()
@@ -64,7 +64,7 @@ struct ContactsListView: View {
                     
                     Button {
                         
-                        // Search for an existing convo with this user 
+                        // Search for an existing convo with this user
                         chatViewModel.getChatFor(contacts: [user])
                         
                         // Display conversation view
@@ -84,7 +84,7 @@ struct ContactsListView: View {
                 .padding(.top, 12)
             }
             else {
-            
+                
                 Spacer()
                 
                 Image("no-contacts-yet")
@@ -101,7 +101,7 @@ struct ContactsListView: View {
                 Spacer()
                 
             }
-        
+            
         }
         .padding(.horizontal)
         
@@ -113,4 +113,3 @@ struct ContactsListView_Previews: PreviewProvider {
         ContactsListView(isChatShowing: .constant(false))
     }
 }
-

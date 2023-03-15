@@ -18,20 +18,20 @@ class TextHelper {
             .replacingOccurrences(of: " ", with: "")
             .replacingOccurrences(of: "+", with: "")
     }
-    
+
     // https://stackoverflow.com/questions/56476007/swiftui-textfield-max-length
     static func limitText(_ stringvar: inout String, _ limit: Int) {
         if (stringvar.count > limit) {
             stringvar = String(stringvar.prefix(limit))
         }
     }
-    
+
     // https://stackoverflow.com/questions/32364055/formatting-phone-number-in-swift
     static func applyPatternOnNumbers(_ stringvar: inout String, pattern: String, replacementCharacter: Character) {
         var pureNumber = stringvar.replacingOccurrences( of: "[^0-9]", with: "", options: .regularExpression)
         for index in 0 ..< pattern.count {
             guard index < pureNumber.count else {
-                stringvar = pureNumber 
+                stringvar = pureNumber
                 return
             }
             let stringIndex = String.Index(utf16Offset: index, in: pattern)

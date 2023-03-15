@@ -32,16 +32,16 @@ struct ConversationPhotoMessage: View {
             
             // Create URL from msg photo url
             let photoUrl = URL(string: imageUrl)
-        
+            
             // Profile image
             AsyncImage(url: photoUrl) { phase in
-            
-                switch phase {
                 
+                switch phase {
+                    
                 case .empty:
                     // Currently fetching
                     ProgressView()
-                
+                    
                 case .success(let image):
                     // Display the fetched image
                     image
@@ -63,9 +63,10 @@ struct ConversationPhotoMessage: View {
                     ConversationTextMessage(msg: "Couldn't load image",
                                             isFromUser: isFromUser)
                 }
-            
+                
             }
         }
+        
     }
 }
 

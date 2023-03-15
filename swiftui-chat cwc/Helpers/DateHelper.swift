@@ -14,7 +14,7 @@ class DateHelper {
         guard date != nil else {
             return ""
         }
-           
+        
         let df = DateFormatter()
         df.dateFormat = "h:mm a"
         

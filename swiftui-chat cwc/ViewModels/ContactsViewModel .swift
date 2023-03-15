@@ -19,7 +19,7 @@ class ContactsViewModel: ObservableObject {
     
     func getLocalContacts() {
         
-        // Perform the contact store method asychronously so it doesn't block the UI 
+        // Perform the contact store method asynchronously so it doesn't block the UI
         DispatchQueue.init(label: "getcontacts").async {
             
             do {
@@ -32,7 +32,7 @@ class ContactsViewModel: ObservableObject {
                             CNContactGivenNameKey,
                             CNContactFamilyNameKey] as [CNKeyDescriptor]
                 
-                // Create a Fetch Request
+                // Create a Fetch request
                 let fetchRequest = CNContactFetchRequest(keysToFetch: keys)
                 
                 // Get the contacts on the user's phone
@@ -65,7 +65,7 @@ class ContactsViewModel: ObservableObject {
             
         }
         
- 
+        
     }
     
     func filterContacts(filterBy: String) {
@@ -86,11 +86,11 @@ class ContactsViewModel: ObservableObject {
             user.firstname?.lowercased().contains(filterText) ?? false ||
             user.lastname?.lowercased().contains(filterText) ?? false ||
             user.phone?.lowercased().contains(filterText) ?? false
-            
+           
         })
     }
     
-    /// Given a list of user ids, return a list of user object that the same user ids 
+    /// Given a list of user ids, return a list of user object that have the same user ids
     func getParticipants(ids: [String]) -> [User] {
         
         // Filter out the users list for only the participants based on ids passed in
@@ -102,7 +102,7 @@ class ContactsViewModel: ObservableObject {
             else {
                 return ids.contains(user.id!)
             }
-            
+                
         }
         
         return foundUsers

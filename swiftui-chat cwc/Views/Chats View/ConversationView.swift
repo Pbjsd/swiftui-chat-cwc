@@ -73,7 +73,7 @@ struct ConversationView: View {
                                 
                                 Group {
                                     if participants.count == 1 {
-                                        
+                                    
                                         Text("\(participant?.firstname ?? "") \(participant?.lastname ?? "")")
                                     }
                                     else if participants.count == 2 {
@@ -87,7 +87,7 @@ struct ConversationView: View {
                                         let participant2 = participants[1]
                                         
                                         Text("\(participant?.firstname ?? ""), \(participant2.firstname ?? "") + \(participants.count - 2) others")
-                                        
+                                            
                                     }
                                 }
                                 .font(Font.chatHeading)
@@ -108,7 +108,7 @@ struct ConversationView: View {
                         if participants.count == 1 {
                             
                             let participant = participants.first
-                            // Display a single profile image 
+                            // Display a single profile image
                             ProfilePicView(user: participant!)
                         }
                         else if participants.count > 1 {
@@ -327,7 +327,8 @@ struct ConversationView: View {
                             .frame(width: 24, height: 24)
                             .tint(Color("icons-primary"))
                     }
-                    .disabled(chatMessage.trimmingCharacters(in: .whitespacesAndNewlines) == "" && selectedImage == nil)
+                    .disabled(chatMessage.trimmingCharacters(in: .whitespacesAndNewlines) == "" &&
+                              selectedImage == nil)
                     
                     
                 }
@@ -350,7 +351,7 @@ struct ConversationView: View {
         }
         .onDisappear {
             
-            // Do any necessary clean up before conversation view disappears
+            // Do any necesary clean up before conversation view disappears
             chatViewModel.conversationViewCleanup()
         }
         .confirmationDialog("From where?", isPresented: $isSourceMenuShowing, actions: {
@@ -390,14 +391,14 @@ struct ConversationView: View {
         .sheet(isPresented: $isContactsPickerShowing) {
             // When sheet is dismissed
             
-            // Search for the conversation with selected participant
-           
-                
+            // Search for the conversation with selected participants
+            
             chatViewModel.getChatFor(contacts: participants)
             
             
         } content: {
-            ContactsPicker(isContactsPickerShowing: $isContactsPickerShowing, selectedContacts: $participants)
+            ContactsPicker(isContactsPickerShowing: $isContactsPickerShowing,
+                           selectedContacts: $participants)
         }
 
         

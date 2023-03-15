@@ -18,7 +18,7 @@ class DatabaseService {
     func getPlatformUsers(localContacts: [CNContact], completion: @escaping ([User]) -> Void) {
         
         // The array where we're storing fetched platform users
-        var platformUsers = [User]() 
+        var platformUsers = [User]()
         
         // Construct an array of string phone numbers to look up
         var lookupPhoneNumbers = localContacts.map { contact in
@@ -38,16 +38,16 @@ class DatabaseService {
         // Query the database for these phone numbers
         let db = Firestore.firestore()
         
-        // Perform queries while we still have phone numbers to lookup
+        // Perform queries while we still have phone numbers to look up
         while !lookupPhoneNumbers.isEmpty {
-            
+        
             // Get the first < 10 phone numbers to look up
             let tenPhoneNumbers = Array(lookupPhoneNumbers.prefix(10))
             
-            //Remove the < 10 that we're looking up
+            // Remove the < 10 that we're looking up
             lookupPhoneNumbers = Array(lookupPhoneNumbers.dropFirst(10))
-        
-            // Look up the first 10 phone numbers
+            
+            // Look up the first 10
             let query = db.collection("users").whereField("phone", in: tenPhoneNumbers)
         
             // Retrieve the users that are on the platform
@@ -58,16 +58,16 @@ class DatabaseService {
                     
                     // For each doc that was fetched, create a user
                     for doc in snapshot!.documents {
-
+                        
                         if let user = try? doc.data(as: User.self) {
                             
                             // Append to the platform users array
                             platformUsers.append(user)
+                        }
                     }
-            }
                     
                     // Check if we have anymore phone numbers to look up
-                    // If not, we can call the completion block and we’re done
+                    // If not, we can call the completion block and we're done
                     if lookupPhoneNumbers.isEmpty {
                         // Return these users
                         completion(platformUsers)
@@ -81,7 +81,7 @@ class DatabaseService {
     }
     
     func setUserProfile(firstName: String, lastName: String, image: UIImage?, completion: @escaping (Bool) -> Void) {
-    
+        
         // Ensure that the user is logged in
         guard AuthViewModel.isUserLoggedIn() != false else {
             // User is not logged in
@@ -177,19 +177,18 @@ class DatabaseService {
             // TODO: Keep the users profile data
             if snapshot != nil && error == nil {
                 
-                // Notify that profile exists 
+                // Notify that profile exists
                 completion(snapshot!.exists)
             }
             else {
-            // TODO: Look into using Result type to indicate failure vs profile exists
-            completion(false)
-            
+                // TODO: Look into using Result type to indicate failure vs profile exists
+                completion(false)
             }
-        
+            
         }
-    
+        
     }
-    
+ 
     // MARK: - Chat Methods
     
     /// This method returns all chat documents where the logged in user is a participant
@@ -247,7 +246,9 @@ class DatabaseService {
         let db = Firestore.firestore()
         
         // Create the query
-        let msgsQuery = db.collection("chats").document(chat.id!).collection("msgs")
+        let msgsQuery = db.collection("chats")
+            .document(chat.id!)
+            .collection("msgs")
             .order(by: "timestamp")
         
         // Perform the query
@@ -301,7 +302,7 @@ class DatabaseService {
                                 "senderid": AuthViewModel.getLoggedInUserId(),
                                 "timestamp": Date()])
         
-        // Update chat document to reflect msg that was just sent 
+        // Update chat document to reflect msg that was just sent
         db.collection("chats")
             .document(chat.id!)
             .setData(["updated": Date(),
@@ -364,7 +365,6 @@ class DatabaseService {
                                      merge: true)
                     }
                 }
-                
             }
         }
     }
@@ -382,7 +382,7 @@ class DatabaseService {
         // Set the data for the document
         try? doc.setData(from: chat, completion: { error in
             
-            // Communicate the document id 
+            // Communicate the document id
             completion(doc.documentID)
         })
     }
@@ -399,4 +399,3 @@ class DatabaseService {
         }
     }
 }
-

@@ -22,7 +22,7 @@ struct ProfilePicView: View {
                 ZStack {
                     Circle()
                         .foregroundColor(.white)
-                
+                    
                     Text(user.firstname?.prefix(1) ?? "")
                         .bold()
                 }
@@ -41,21 +41,21 @@ struct ProfilePicView: View {
                         .clipped()
                 }
                 else {
-                
+                    
                     // If not in cache, download it
-                
+                    
                     // Create URL from user photo url
                     let photoUrl = URL(string: user.photo ?? "")
-                
+                    
                     // Profile image
                     AsyncImage(url: photoUrl) { phase in
-                    
-                        switch phase {
                         
+                        switch phase {
+                            
                         case .empty:
                             // Currently fetching
                             ProgressView()
-                        
+                            
                         case .success(let image):
                             // Display the fetched image
                             image
@@ -68,26 +68,27 @@ struct ProfilePicView: View {
                                     CacheService.setImage(image: image,
                                                           forKey: user.photo!)
                                 }
-                        
+                            
                         case .failure:
                             // Couldn't fetch profile photo
                             // Display circle with first letter of first name
-                        
+                            
                             ZStack {
                                 Circle()
                                     .foregroundColor(.white)
-                            
+                                
                                 Text(user.firstname?.prefix(1) ?? "")
                                     .bold()
                             }
                         }
-                    
+                        
                     }
                 }
                 
                 
+                
             }
-        
+            
             // Blue border
             Circle()
                 .stroke(Color("create-profile-border"), lineWidth: 2)

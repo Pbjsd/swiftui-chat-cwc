@@ -41,7 +41,7 @@ struct CustomTabBar: View {
                 // Clear the selected chat
                 chatViewModel.clearSelectedChat()
                 
-                // Show conversation view for new message 
+                // Show conversation view for new message
                 isChatShowing = true
                 
                 // AuthViewModel.logout()

@@ -39,15 +39,16 @@ struct WelcomeView: View {
                 
             }
             .buttonStyle(OnboardingButtonStyle())
-
-            Text("By tapping 'Get Started', you agree to our Privacy Policy.")
+            
+            Text("By tapping ‘Get Started’, you agree to our Privacy Policy.")
                 .font(Font.smallText)
                 .padding(.top, 14)
                 .padding(.bottom, 61)
-            
+
             
         }
         .padding(.horizontal)
+        
     }
 }
 

@@ -41,7 +41,7 @@ class ChatViewModel: ObservableObject {
     
     /// Search for chat with passed in users. If found, set as selected chat. If not found, create a new chat
     func getChatFor(contacts: [User]) {
-     
+        
         // Check the users
         for contact in contacts {
             if contact.id == nil { return }
@@ -95,7 +95,7 @@ class ChatViewModel: ObservableObject {
                 self.chats.append(self.selectedChat!)
             }
             
-           
+            
         }
     }
     
@@ -153,12 +153,13 @@ class ChatViewModel: ObservableObject {
             return [String]()
         }
         
-        // Filter out the user's id 
+        // Filter out the user's id
         let ids = selectedChat!.participantids.filter { id in
             id != AuthViewModel.getLoggedInUserId()
         }
         
         return ids
     }
+    
     
 }
