@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3C710A29C220BC00A8EF96 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C710929C220BC00A8EF96 /* SettingsView.swift */; };
 		5A50A772287368D1001AF7E7 /* swiftui_chat_cwcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A50A771287368D1001AF7E7 /* swiftui_chat_cwcApp.swift */; };
 		5A50A774287368D1001AF7E7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A50A773287368D1001AF7E7 /* RootView.swift */; };
 		5A50A776287368D3001AF7E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A50A775287368D3001AF7E7 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A3C710929C220BC00A8EF96 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5A50A76E287368D0001AF7E7 /* swiftui-chat cwc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-chat cwc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A50A771287368D1001AF7E7 /* swiftui_chat_cwcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_chat_cwcApp.swift; sourceTree = "<group>"; };
 		5A50A773287368D1001AF7E7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3C710829C2200200A8EF96 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5A3C710929C220BC00A8EF96 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5A50A765287368D0001AF7E7 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 				5ACCA2AD297C8C17009C121D /* Chats View */,
 				5ACCA2AC297C8C02009C121D /* Contacts View */,
 				5A55FA05287B52EF00D16C06 /* Custom Tab Bar */,
+				5A3C710829C2200200A8EF96 /* Settings */,
 				5AB204872989BF840073143D /* Misc */,
 			);
 			path = Views;
@@ -385,6 +396,7 @@
 				5A50A772287368D1001AF7E7 /* swiftui_chat_cwcApp.swift in Sources */,
 				5ACCA2952889BB04009C121D /* VerificationView.swift in Sources */,
 				5ACCA29D288C6CC6009C121D /* OnboardingButtonStyle .swift in Sources */,
+				5A3C710A29C220BC00A8EF96 /* SettingsView.swift in Sources */,
 				5ACCA2B3297F043E009C121D /* ContactRow.swift in Sources */,
 				5AC87D0F29AA96BA00D18C36 /* ChatsListRow.swift in Sources */,
 				5ACCA2A1288E5593009C121D /* CreateProfileTextfieldStyle .swift in Sources */,

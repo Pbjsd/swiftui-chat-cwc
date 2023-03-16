@@ -44,7 +44,6 @@ struct CustomTabBar: View {
                 // Show conversation view for new message
                 isChatShowing = true
                 
-                // AuthViewModel.logout()
             } label: {
                 
                 VStack (alignment: .center, spacing: 4) {
