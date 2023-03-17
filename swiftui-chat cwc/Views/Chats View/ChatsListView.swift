@@ -46,23 +46,34 @@ struct ChatsListView: View {
                 
                 List(chatViewModel.chats) { chat in
                     
-                    Button {
+                    let otherParticipants = contactsViewModel.getParticipants(ids: chat.participantids)
+                    
+                    // Detect if it's a chat with a deleted user 
+                    if let otherParticipant = otherParticipants.first,
+                        chat.numparticipants == 2,
+                        !otherParticipant.isactive {
                         
-                        // Set selcted chat for the chatviewmodel
-                        chatViewModel.selectedChat = chat
-                        
-                        // display conversation view
-                        isChatShowing = true
-                        
-                    } label: {
-                        
-                        ChatsListRow(chat: chat,
-                                     otherParticipants: contactsViewModel.getParticipants(ids: chat.participantids))
+                        // This is a conversation with a deleted user, don't show anything
                     }
-                    .buttonStyle(.plain)
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
-
+                    else {
+                        
+                        Button {
+                            
+                            // Set selcted chat for the chatviewmodel
+                            chatViewModel.selectedChat = chat
+                            
+                            // display conversation view
+                            isChatShowing = true
+                            
+                        } label: {
+                            
+                            ChatsListRow(chat: chat,
+                                         otherParticipants: otherParticipants)
+                        }
+                        .buttonStyle(.plain)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                    }
                 }
                 .listStyle(.plain)
                 
