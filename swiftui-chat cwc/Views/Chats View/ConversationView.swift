@@ -393,9 +393,11 @@ struct ConversationView: View {
         .sheet(isPresented: $isContactsPickerShowing) {
             // When sheet is dismissed
             
-            // Search for the conversation with selected participants
-            
-            chatViewModel.getChatFor(contacts: participants)
+            if participants.count > 0 {
+                
+                // Search for the conversation with selected participants
+                chatViewModel.getChatFor(contacts: participants)
+            }
             
             
         } content: {

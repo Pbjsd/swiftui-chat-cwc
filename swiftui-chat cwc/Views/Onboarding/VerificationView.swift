@@ -18,6 +18,8 @@ struct VerificationView: View {
     
     @State var verificationcode = ""
     
+    @State var isButtonDisabled = false 
+    
     var body: some View {
         
         VStack {
@@ -67,6 +69,10 @@ struct VerificationView: View {
             Spacer()
             
             Button {
+                
+                // Disable the button
+                isButtonDisabled = true
+                
                 // Send the verification code to Firebase
                 AuthViewModel.verifyCode(code: verificationcode) { error in
                     
@@ -95,15 +101,26 @@ struct VerificationView: View {
                     else {
                         // TODO: Show error message
                     }
+                    
+                    // Reenable the button
+                    isButtonDisabled = false
                 }
                 
                 
                 
             } label: {
-                Text("Next")
+                HStack {
+                    Text("Next")
+                    
+                    if isButtonDisabled {
+                        ProgressView()
+                            .padding(.leading, 2)
+                    }
+                }
             }
             .buttonStyle(OnboardingButtonStyle())
             .padding(.bottom, 87)
+            .disabled(isButtonDisabled)
 
             
         }
