@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A3C710A29C220BC00A8EF96 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C710929C220BC00A8EF96 /* SettingsView.swift */; };
+		5A3C710C29C3F1BA00A8EF96 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C710B29C3F1BA00A8EF96 /* SettingsViewModel.swift */; };
+		5A3C710E29C3F2CD00A8EF96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C710D29C3F2CD00A8EF96 /* Constants.swift */; };
 		5A50A772287368D1001AF7E7 /* swiftui_chat_cwcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A50A771287368D1001AF7E7 /* swiftui_chat_cwcApp.swift */; };
 		5A50A774287368D1001AF7E7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A50A773287368D1001AF7E7 /* RootView.swift */; };
 		5A50A776287368D3001AF7E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A50A775287368D3001AF7E7 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		5A3C710929C220BC00A8EF96 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5A3C710B29C3F1BA00A8EF96 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		5A3C710D29C3F2CD00A8EF96 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A50A76E287368D0001AF7E7 /* swiftui-chat cwc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-chat cwc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A50A771287368D1001AF7E7 /* swiftui_chat_cwcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_chat_cwcApp.swift; sourceTree = "<group>"; };
 		5A50A773287368D1001AF7E7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 				5ACCA28B28870C6A009C121D /* AuthViewModel.swift */,
 				5ACCA2A228904A3B009C121D /* ContactsViewModel .swift */,
 				5AB2048E2992DC9F0073143D /* ChatViewModel.swift */,
+				5A3C710B29C3F1BA00A8EF96 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				5ACCA2A8291C4A0F009C121D /* TextHelper.swift */,
 				5AB2048A298C80BC0073143D /* RoundedCornerExtension.swift */,
 				5AEE22BC29A59116007C4704 /* DateHelper.swift */,
+				5A3C710D29C3F2CD00A8EF96 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AC87D1729AFAA3C00D18C36 /* ContactsPicker.swift in Sources */,
+				5A3C710E29C3F2CD00A8EF96 /* Constants.swift in Sources */,
 				5ACCA2A728A01EDD009C121D /* DatabaseService.swift in Sources */,
 				5A773ED129B243E200DC098A /* GroupProfilePicView.swift in Sources */,
 				5ACCA2992889BB26009C121D /* SyncContactsView.swift in Sources */,
@@ -388,6 +395,7 @@
 				5ACCA28C28870C6A009C121D /* AuthViewModel.swift in Sources */,
 				5ACCA2B1297C8DC0009C121D /* ChatsListView.swift in Sources */,
 				5ACCA2972889BB14009C121D /* CreateProfileView.swift in Sources */,
+				5A3C710C29C3F1BA00A8EF96 /* SettingsViewModel.swift in Sources */,
 				5ACCA2A528986342009C121D /* User.swift in Sources */,
 				5AC87D1129AE5EEB00D18C36 /* CacheService.swift in Sources */,
 				5ACCA29B2889C2BD009C121D /* WelcomeView.swift in Sources */,
