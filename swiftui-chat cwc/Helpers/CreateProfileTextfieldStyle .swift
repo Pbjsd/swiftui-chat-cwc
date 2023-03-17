@@ -20,6 +20,7 @@ struct CreateProfileTextfieldStyle: TextFieldStyle {
             
             // This references the textfield
             configuration
+                .foregroundColor(Color("text-textfield"))
                 .font(Font.tabBar)
                 .padding()
         }

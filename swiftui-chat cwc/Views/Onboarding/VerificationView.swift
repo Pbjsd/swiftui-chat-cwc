@@ -18,7 +18,8 @@ struct VerificationView: View {
     
     @State var verificationcode = ""
     
-    @State var isButtonDisabled = false 
+    @State var isButtonDisabled = false
+    @State var isErrorLabelVisible = false
     
     var body: some View {
         
@@ -41,6 +42,7 @@ struct VerificationView: View {
                 
                 HStack {
                     TextField("", text: $verificationcode)
+                        .foregroundColor(Color("text-textfield"))
                         .font(Font.bodyParagraph)
                         .keyboardType(.numberPad)
                         .onReceive(Just(verificationcode)) { _ in
@@ -66,9 +68,19 @@ struct VerificationView: View {
             }
             .padding(.top, 34)
             
+            // Error label
+            Text("Invalid verification code.")
+                .foregroundColor(.red)
+                .font(Font.smallText)
+                .padding(.top, 20)
+                .opacity(isErrorLabelVisible ? 1 : 0)
+            
             Spacer()
             
             Button {
+                
+                // Hide error message
+                isErrorLabelVisible = false
                 
                 // Disable the button
                 isButtonDisabled = true
@@ -99,7 +111,8 @@ struct VerificationView: View {
                         }
                     }
                     else {
-                        // TODO: Show error message
+                        // Show error message
+                        isErrorLabelVisible = true
                     }
                     
                     // Reenable the button
