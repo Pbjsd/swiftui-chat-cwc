@@ -153,7 +153,7 @@ class DatabaseService {
                     completion(false)
                 }
             }
-            
+            uploadTask.resume()
             
         }
         else {

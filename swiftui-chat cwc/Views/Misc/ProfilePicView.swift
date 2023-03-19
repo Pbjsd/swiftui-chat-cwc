@@ -82,6 +82,8 @@ struct ProfilePicView: View {
                                     .bold()
                                     .foregroundColor(Color("text-secondary"))
                             }
+                        @unknown default:
+                            EmptyView()
                         }
                         
                     }

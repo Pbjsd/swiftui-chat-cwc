@@ -70,6 +70,9 @@ struct ConversationPhotoMessage: View {
                     // Display circle with first letter of first name
                     ConversationTextMessage(msg: "Couldn't load image",
                                             isFromUser: isFromUser)
+                    
+                @unknown default:
+                    EmptyView()
                 }
                 
             }
