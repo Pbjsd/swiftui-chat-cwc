@@ -45,8 +45,8 @@ struct ContactsListView: View {
                 Rectangle()
                     .foregroundColor(Color.white)
                     .cornerRadius(20)
-                
-                TextField("Search contact or number", text: $filterText)
+
+                TextField("", text: $filterText)
                     .font(Font.tabBar)
                     .foregroundColor(Color("text-textfield"))
                     .placeholder(when: filterText.isEmpty) {

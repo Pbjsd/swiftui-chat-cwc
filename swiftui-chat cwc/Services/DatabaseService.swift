@@ -8,6 +8,8 @@
 import Foundation
 import Contacts
 import Firebase
+import FirebaseFirestoreSwift
+import FirebaseStorage
 import UIKit
 
 class DatabaseService {
@@ -218,6 +220,11 @@ class DatabaseService {
                     // Add the chat into the array
                     if let chat = chat {
                         chats.append(chat)
+                        if chats.count > 1 {
+                            // I initially had it set to < which meant that the oldest is first
+                            //  but it should have been > so that the latest is first
+                            chats = chats.sorted(by: { $0.updated! > $1.updated! })
+                        }
                     }
                 }
                 

@@ -18,6 +18,7 @@ class ContactsViewModel: ObservableObject {
     private var localContacts = [CNContact]()
     
     func getLocalContacts() {
+        localContacts = [] //  Prevents duplicates being added to the Contacts list.
         
         // Perform the contact store method asynchronously so it doesn't block the UI
         DispatchQueue.init(label: "getcontacts").async {

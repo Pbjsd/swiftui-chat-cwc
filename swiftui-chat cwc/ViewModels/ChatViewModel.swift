@@ -77,7 +77,9 @@ class ChatViewModel: ObservableObject {
             let newChat = Chat(id: nil,
                                numparticipants: allParticipantIds.count,
                                participantids: allParticipantIds,
-                               lastmsg: nil, updated: nil, msgs: nil)
+                               lastmsg: nil,
+                               updated: Date(), // updated always has an initial value to allow sorting of chats
+                               msgs: nil)
             
             // Set as selected chat
             self.selectedChat = newChat

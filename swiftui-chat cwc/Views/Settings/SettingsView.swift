@@ -60,6 +60,7 @@ struct SettingsView: View {
                         AuthViewModel.logout()
                         
                         // Show login screen again
+                        isSettingsShowing = false
                         isOnboarding = true
                         
                     } label: {

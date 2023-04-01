@@ -39,12 +39,21 @@ struct VerificationView: View {
                 Rectangle()
                     .frame(height: 56)
                     .foregroundColor(Color("input"))
+                    .overlay(
+                        Rectangle()
+                            .stroke(Color("border"), lineWidth: 1)
+                    )
                 
                 HStack {
                     TextField("", text: $verificationcode)
                         .foregroundColor(Color("text-textfield"))
                         .font(Font.bodyParagraph)
                         .keyboardType(.numberPad)
+                        .placeholder(when: verificationcode.isEmpty, placeholder: {
+                            Text("_ _ _ _ _ _")
+                                .foregroundColor(Color("text-textfield"))
+                                .font(Font.bodyParagraph)
+                        })
                         .onReceive(Just(verificationcode)) { _ in
                             TextHelper.limitText(&verificationcode, 6)
                         }
