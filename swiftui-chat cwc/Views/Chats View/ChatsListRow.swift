@@ -69,7 +69,8 @@ struct ChatsListRow: View {
             }
             
             // Extra space
-            Spacer()
+//            Spacer()
+          Color(uiColor: .secondarySystemBackground)
             
             // Timestamp
             Text(chat.updated == nil ? "" :

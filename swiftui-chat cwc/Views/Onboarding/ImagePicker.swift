@@ -2,7 +2,7 @@
 //  ImagePicker.swift
 //  Image Picker Demo
 //
-//  Created by Chris Ching on 2021-11-02.
+//  Created by Panchi
 //
 
 import Foundation
