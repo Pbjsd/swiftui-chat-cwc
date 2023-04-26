@@ -25,28 +25,26 @@ struct RootView: View {
     
     var body: some View {
         
-        ZStack {
-            
-            Color("background")
-                .ignoresSafeArea()
-            
-            VStack {
-                
-                switch selectedTab {
-                    
-                case .chats:
-                    ChatsListView(isChatShowing: $isChatShowing,
-                                  isSettingsShowing: $isSettingsShowing)
-                case .contacts:
-                    ContactsListView(isChatShowing: $isChatShowing,
-                                     isSettingsShowing: $isSettingsShowing)
-                }
-                
-                Spacer()
-                
-                CustomTabBar(selectedTab: $selectedTab, isChatShowing: $isChatShowing)
-            }
-        }
+      VStack {
+
+          switch selectedTab {
+
+          case .chats:
+            NewView(isChatShowing: $isChatShowing,
+                    isSettingsShowing: $isSettingsShowing)
+//                    ChatsListView(isChatShowing: $isChatShowing,
+//                                  isSettingsShowing: $isSettingsShowing)
+          case .contacts:
+              ContactsListView(isChatShowing: $isChatShowing,
+                               isSettingsShowing: $isSettingsShowing)
+          }
+
+          Spacer()
+
+          CustomTabBar(selectedTab: $selectedTab, isChatShowing: $isChatShowing)
+      }
+      .background(Color("background")
+        .ignoresSafeArea())
         .onAppear(perform: {
             if !isOnboarding {
                 // User has already onboarded, load contacts

@@ -50,6 +50,8 @@
 		5ADEE8202875DB2900457A5B /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81D2875DB2900457A5B /* LexendDeca-Regular.ttf */; };
 		5ADEE8212875DB2900457A5B /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */; };
 		5ADEE82428761D7A00457A5B /* Fonts .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEE82328761D7A00457A5B /* Fonts .swift */; };
+		5AE6B87D29F8503B005A443C /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6B87C29F8503B005A443C /* UserProfileView.swift */; };
+		5AE6B88229F96837005A443C /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6B88129F96837005A443C /* NewView.swift */; };
 		5AEE22BD29A59116007C4704 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE22BC29A59116007C4704 /* DateHelper.swift */; };
 		DB04428929CDB73F00A635D5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB04428829CDB73F00A635D5 /* FirebaseAuth */; };
 		DB04428B29CDB73F00A635D5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB04428A29CDB73F00A635D5 /* FirebaseFirestore */; };
@@ -105,6 +107,8 @@
 		5ADEE81E2875DB2900457A5B /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
 		5ADEE8222875E07B00457A5B /* swiftui-chat-cwc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "swiftui-chat-cwc-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5ADEE82328761D7A00457A5B /* Fonts .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts .swift"; sourceTree = "<group>"; };
+		5AE6B87C29F8503B005A443C /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		5AE6B88129F96837005A443C /* NewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
 		5AEE22BC29A59116007C4704 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		DBC70DF129CD1F5F00C4C8FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +183,7 @@
 		5A50A77F287368ED001AF7E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AE6B88029F96820005A443C /* RebeloperViews */,
 				5A50A773287368D1001AF7E7 /* RootView.swift */,
 				5ACCA28D2888792A009C121D /* Onboarding */,
 				5ACCA2AD297C8C17009C121D /* Chats View */,
@@ -258,6 +263,7 @@
 			children = (
 				5AB204882989C0620073143D /* ProfilePicView.swift */,
 				5A773ED029B243E200DC098A /* GroupProfilePicView.swift */,
+				5AE6B87C29F8503B005A443C /* UserProfileView.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -296,6 +302,14 @@
 				5AC87D1629AFAA3C00D18C36 /* ContactsPicker.swift */,
 			);
 			path = "Chats View";
+			sourceTree = "<group>";
+		};
+		5AE6B88029F96820005A443C /* RebeloperViews */ = {
+			isa = PBXGroup;
+			children = (
+				5AE6B88129F96837005A443C /* NewView.swift */,
+			);
+			path = RebeloperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,10 +430,12 @@
 				5AB2048F2992DC9F0073143D /* ChatViewModel.swift in Sources */,
 				5AB2048D298F6A360073143D /* Chat.swift in Sources */,
 				5AB2048B298C80BC0073143D /* RoundedCornerExtension.swift in Sources */,
+				5AE6B87D29F8503B005A443C /* UserProfileView.swift in Sources */,
 				5ADEE82428761D7A00457A5B /* Fonts .swift in Sources */,
 				5AC87D1329AF0F2A00D18C36 /* ConversationTextMessage.swift in Sources */,
 				5AB204892989C0620073143D /* ProfilePicView.swift in Sources */,
 				5AB20486298849B10073143D /* ConversationView.swift in Sources */,
+				5AE6B88229F96837005A443C /* NewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -530,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -558,7 +574,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,7 +606,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

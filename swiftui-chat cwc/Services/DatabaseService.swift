@@ -174,12 +174,14 @@ class DatabaseService {
         
         // Create firebase ref
         let db = Firestore.firestore()
+
+      // let user = try snapshot!.data(as: User.self)
         
         db.collection("users").document(AuthViewModel.getLoggedInUserId()).getDocument { snapshot, error in
             
             // TODO: Keep the users profile data
             if snapshot != nil && error == nil {
-                
+
                 // Notify that profile exists
                 completion(snapshot!.exists)
             }
