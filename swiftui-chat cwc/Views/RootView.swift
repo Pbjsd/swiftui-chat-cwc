@@ -14,6 +14,7 @@ struct RootView: View {
     
     @EnvironmentObject var contactsViewModel: ContactsViewModel
     @EnvironmentObject var chatViewModel: ChatViewModel
+  @EnvironmentObject private var profileService: ProfileService
     
     @State var selectedTab: Tabs = .contacts
     
@@ -30,8 +31,10 @@ struct RootView: View {
           switch selectedTab {
 
           case .chats:
-            NewView(isChatShowing: $isChatShowing,
-                    isSettingsShowing: $isSettingsShowing)
+            UsersListView(isChatShowing: $isChatShowing,
+                          isSettingsShowing: $isSettingsShowing)
+//            NewView(isChatShowing: $isChatShowing,
+//                    isSettingsShowing: $isSettingsShowing)
 //                    ChatsListView(isChatShowing: $isChatShowing,
 //                                  isSettingsShowing: $isSettingsShowing)
           case .contacts:
@@ -60,7 +63,7 @@ struct RootView: View {
         .fullScreenCover(isPresented: $isChatShowing, onDismiss: nil) {
             
             // The conversation view
-            ConversationView(isChatShowing: $isChatShowing)
+          ConversationView(isChatShowing: $isChatShowing, isSettingsShowing: $isSettingsShowing)
         }
         .fullScreenCover(isPresented: $isSettingsShowing, onDismiss: nil, content: {
             
@@ -79,8 +82,12 @@ struct RootView: View {
                 chatViewModel.chatListViewCleanup()
             }
         }
+        .onAppear {
+          profileService.fetchCurrentUser()
+        }
         
     }
+
     
 }
 

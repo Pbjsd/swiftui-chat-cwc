@@ -82,13 +82,15 @@ class DatabaseService {
         
     }
     
-    func setUserProfile(firstName: String, lastName: String, image: UIImage?, completion: @escaping (Bool) -> Void) {
+  func setUserProfile(firstName: String, lastName: String, gender: String, age: String, occupation: String, hobbies: String, bio: String, iAmLookingFor: String, image: UIImage?, completion: @escaping (Bool) -> Void) {
         
         // Ensure that the user is logged in
         guard AuthViewModel.isUserLoggedIn() != false else {
             // User is not logged in
             return
         }
+
+    guard let uid = Auth.auth().currentUser?.uid else { return }
         
         // Get user's phone number
         let userPhone = TextHelper.sanitizePhoneNumber(AuthViewModel.getLoggedInUserPhone())
@@ -98,11 +100,18 @@ class DatabaseService {
         
         // Set the profile data
         let doc = db.collection("users").document(AuthViewModel.getLoggedInUserId())
-        doc.setData(["firstname": firstName,
-                     "lastname": lastName,
-                     "isactive": true, 
-                     "phone": userPhone])
-        
+    doc.setData(["uid": uid,
+                 "firstname": firstName,
+                 "lastname": lastName,
+                 "gender": gender,
+                 "age": age,
+                 "occupation": occupation,
+                 "hobbies": hobbies,
+                 "bio": bio,
+                 "iamlookingfor...": iAmLookingFor,
+                 "isactive": true,
+                 "phone": userPhone])
+
         // Check if an image is passed through
         if let image = image {
         

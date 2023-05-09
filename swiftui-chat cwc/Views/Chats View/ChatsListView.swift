@@ -21,6 +21,8 @@ struct ChatsListView: View {
 
     VStack {
 
+      
+
       // Heading
       HStack {
         Text("Chats")
@@ -136,11 +138,12 @@ struct ChatsListView: View {
       print("chats count: \(chats.count)")
       offsets = Array(repeating: CGSize.zero, count: chats.count)
     }
+    
+
+    }
 
 
 
-
-  }
 
   func swipeCard(width: CGFloat, index: Int) {
     switch width {

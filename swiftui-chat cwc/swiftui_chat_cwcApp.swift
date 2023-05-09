@@ -15,6 +15,8 @@ struct swiftui_chat_cwcApp: App {
     @StateObject var settingsViewModel = SettingsViewModel()
     @StateObject var contactsViewModel = ContactsViewModel()
     @StateObject var chatViewModel = ChatViewModel()
+    @StateObject var profileService = ProfileService()
+
     
     var body: some Scene {
         WindowGroup {
@@ -22,6 +24,7 @@ struct swiftui_chat_cwcApp: App {
                 .environmentObject(contactsViewModel)
                 .environmentObject(chatViewModel)
                 .environmentObject(settingsViewModel)
+                .environmentObject(profileService)
                 .preferredColorScheme(settingsViewModel.isDarkMode ? .dark : .light)
         }
     }

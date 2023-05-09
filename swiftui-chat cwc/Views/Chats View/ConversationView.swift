@@ -13,6 +13,7 @@ struct ConversationView: View {
   @EnvironmentObject var contactsViewModel: ContactsViewModel
 
   @Binding var isChatShowing: Bool
+  @Binding var isSettingsShowing: Bool
 
   @State var selectedImage: UIImage?
   @State var isPickerShowing = false
@@ -119,7 +120,7 @@ struct ConversationView: View {
                 ProfilePicView(user: participant!)
               }
               .sheet(isPresented: $showingSheet) {
-                UserProfileView()
+                NewView(isChatShowing: $isChatShowing, isSettingsShowing: $isSettingsShowing)
               }
               // It used to look like this before I made this into a button ^:
               // Display a single profile image
@@ -432,6 +433,6 @@ struct ConversationView: View {
 
 struct ConversationView_Previews: PreviewProvider {
   static var previews: some View {
-    ConversationView(isChatShowing: .constant(false))
+    ConversationView(isChatShowing: .constant(false), isSettingsShowing: .constant(false))
   }
 }

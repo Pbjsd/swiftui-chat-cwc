@@ -11,6 +11,8 @@ import FirebaseFirestoreSwift
 struct User: Codable, Identifiable, Hashable {
     
     @DocumentID var id: String?
+
+  var uid: String?
     
     var firstname: String?
     
@@ -20,6 +22,18 @@ struct User: Codable, Identifiable, Hashable {
     
     var photo: String?
     
-    var isactive: Bool = true 
+    var isactive: Bool = true
+
+    var gender: String?
+
+    var age: String?
+
+    var occupation: String?
+
+    var hobbies: String?
+
+    var bio: String?
+
+    var iamlookingfor: String?
     
 }
