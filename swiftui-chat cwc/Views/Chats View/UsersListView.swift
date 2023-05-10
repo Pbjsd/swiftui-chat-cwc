@@ -9,13 +9,10 @@ import SwiftUI
 
 struct UsersListView: View {
 
-  @Binding var isChatShowing: Bool
-  @Binding var isSettingsShowing: Bool
-
   @EnvironmentObject private var profileService: ProfileService
 
   @State private var offsets = Array(repeating: CGSize.zero, count: 10000)
-  @State private var redOpacity = 0.0
+  @State private var redOpacities = Array(repeating: 0.0, count: 10000)
 
     var body: some View {
       ZStack {
@@ -45,6 +42,7 @@ struct UsersListView: View {
                 .padding()
             }
           }
+          .foregroundColor(.red.opacity(redOpacities[index]))
           .if(!profileService.otherUsers.isEmpty, transform: { view in
             view
               .offset(x: offsets[index].width, y: offsets[index].height * 0.4)
@@ -53,9 +51,10 @@ struct UsersListView: View {
             .gesture(
               DragGesture()
                 .onChanged { gesture in
-                  offsets[index] = gesture.translation
+//                  offsets[index] = gesture.translation
+                  offsets[index].width = gesture.translation.width
                   withAnimation {
-//                    changeColor(width: offsets[index].width)
+                    changeColor(width: offsets[index].width, index: index)
                   }
 
                 } .onEnded { _ in
@@ -65,9 +64,6 @@ struct UsersListView: View {
                   }
                 }
             )
-              .overlay {
-            Color.red.opacity(redOpacity)
-          }
         }
       }
       .onReceive(profileService.$currentUser, perform: { _ in
@@ -81,16 +77,20 @@ struct UsersListView: View {
       })
     }
 
-//  func changeColor(width: CGFloat) {
-//    switch width {
-//    case -500...(-150):
-//      redOpacity = width - 50
-//    case 150...500:
-//      redOpacity = width - 50
-//    default:
-//      redOpacity = 0
-//    }
-//  }
+  func changeColor(width: CGFloat, index: Int) {
+    switch width {
+    case -500...(-150):
+      redOpacities[index] = width - 50
+    case 150...500:
+      print(width)
+      var opacity = width / 300
+print("opacity: \(opacity)")
+      print("index: \(index)")
+      redOpacities[profileService.otherUsers.count] = opacity
+    default:
+      redOpacities[index] = 0
+    }
+  }
 
   func swipeCard(width: CGFloat, index: Int) {
     switch width {
@@ -103,6 +103,7 @@ struct UsersListView: View {
     default:
       offsets[index] = .zero
     }
+    profileService.otherUsers.remove(at: index)
   }
 }
 

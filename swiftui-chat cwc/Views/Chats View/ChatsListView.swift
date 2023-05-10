@@ -12,8 +12,6 @@ struct ChatsListView: View {
   @EnvironmentObject var chatViewModel: ChatViewModel
   @EnvironmentObject var contactsViewModel: ContactsViewModel
 
-  @Binding var isChatShowing: Bool
-  @Binding var isSettingsShowing: Bool
 
   @State private var offsets = Array(repeating: CGSize.zero, count: 10000)
 
@@ -32,7 +30,7 @@ struct ChatsListView: View {
 
         Button {
           // Shows settings
-          isSettingsShowing = true
+//          isSettingsShowing = true
         } label: {
           Image(systemName: "gearshape.fill")
             .resizable()
@@ -86,7 +84,7 @@ struct ChatsListView: View {
                 chatViewModel.selectedChat = chat
 
                 // display conversation view
-                isChatShowing = true
+//                isChatShowing = true
               }
               .listRowBackground(Color.clear)
               .listRowSeparator(.hidden)
@@ -161,8 +159,7 @@ struct ChatsListView: View {
 
 struct ChatsListView_Previews: PreviewProvider {
   static var previews: some View {
-    ChatsListView(isChatShowing: .constant(false),
-                  isSettingsShowing: .constant(false))
+    ChatsListView()
   }
 }
 

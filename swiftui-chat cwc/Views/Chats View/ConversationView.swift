@@ -111,20 +111,21 @@ struct ConversationView: View {
             // Profile image
             if participants.count == 1 {
 
-              let participant = participants.first
-              
-              // Display a single profile image
-              Button {
-                showingSheet.toggle()
-              } label: {
-                ProfilePicView(user: participant!)
+              if let participant = participants.first {
+
+                // Display a single profile image
+                Button {
+                  showingSheet.toggle()
+                } label: {
+                  ProfilePicView(user: participant)
+                }
+                .sheet(isPresented: $showingSheet) {
+                  NewView(user: participant)
+                }
+                // It used to look like this before I made this into a button ^:
+                // Display a single profile image
+                // ProfilePicView(user: participant!)
               }
-              .sheet(isPresented: $showingSheet) {
-                NewView(isChatShowing: $isChatShowing, isSettingsShowing: $isSettingsShowing)
-              }
-              // It used to look like this before I made this into a button ^:
-              // Display a single profile image
-              // ProfilePicView(user: participant!)
 
             }
             else if participants.count > 1 {

@@ -20,7 +20,7 @@ struct swiftui_chat_cwcApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootView()
+            TabsView()
                 .environmentObject(contactsViewModel)
                 .environmentObject(chatViewModel)
                 .environmentObject(settingsViewModel)

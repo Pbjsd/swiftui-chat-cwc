@@ -11,9 +11,7 @@ struct ContactsListView: View {
     
     @EnvironmentObject var contactsViewModel: ContactsViewModel
     @EnvironmentObject var chatViewModel: ChatViewModel
-    
-    @Binding var isChatShowing: Bool
-    @Binding var isSettingsShowing: Bool
+
     
     @State var filterText = ""
     
@@ -29,7 +27,7 @@ struct ContactsListView: View {
                 
                 Button {
                     // Show settings
-                    isSettingsShowing = true
+//                    isSettingsShowing = true
                 } label: {
                     Image(systemName: "gearshape.fill")
                         .resizable()
@@ -77,7 +75,7 @@ struct ContactsListView: View {
                             chatViewModel.getChatFor(contacts: [user])
                             
                             // Display conversation view
-                            isChatShowing = true
+//                            isChatShowing = true
                             
                         } label: {
                             
@@ -120,7 +118,6 @@ struct ContactsListView: View {
 
 struct ContactsListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsListView(isChatShowing: .constant(false),
-                         isSettingsShowing: .constant(false))
+        ContactsListView()
     }
 }

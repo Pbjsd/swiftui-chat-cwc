@@ -31,15 +31,13 @@ struct RootView: View {
           switch selectedTab {
 
           case .chats:
-            UsersListView(isChatShowing: $isChatShowing,
-                          isSettingsShowing: $isSettingsShowing)
+            UsersListView()
 //            NewView(isChatShowing: $isChatShowing,
 //                    isSettingsShowing: $isSettingsShowing)
 //                    ChatsListView(isChatShowing: $isChatShowing,
 //                                  isSettingsShowing: $isSettingsShowing)
           case .contacts:
-              ContactsListView(isChatShowing: $isChatShowing,
-                               isSettingsShowing: $isSettingsShowing)
+              ContactsListView()
           }
 
           Spacer()
