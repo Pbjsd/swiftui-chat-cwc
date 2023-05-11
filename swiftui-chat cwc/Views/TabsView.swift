@@ -14,12 +14,13 @@ struct TabsView: View {
     var body: some View {
       TabView {
         ContactsListView()
+        //Tried to add ChatsListView() above but kept getting errors 
           .tabItem {
-            Image(systemName: "person")
+            Image(systemName: "message")
           }
         UsersListView()
           .tabItem {
-            Image(systemName: "house")
+            Image(systemName: "person")
           }
 
         NewView(user: nil)

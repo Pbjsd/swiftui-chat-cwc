@@ -14,13 +14,14 @@ struct UsersListView: View {
   @State private var offsets = Array(repeating: CGSize.zero, count: 10000)
   @State private var redOpacities = Array(repeating: 0.0, count: 10000)
 
-    var body: some View {
+  var body: some View {
       ZStack {
         Text("No more users")
           .font(.caption)
           .foregroundColor(.gray)
         ForEach(profileService.otherUsers.indices, id: \.self) { index in
           let user = profileService.otherUsers[index]
+          
           VStack {
             AsyncImage(url: URL(string: user.photo ?? "")) { image in
               image
@@ -51,7 +52,7 @@ struct UsersListView: View {
             .gesture(
               DragGesture()
                 .onChanged { gesture in
-//                  offsets[index] = gesture.translation
+                  //                  offsets[index] = gesture.translation
                   offsets[index].width = gesture.translation.width
                   withAnimation {
                     changeColor(width: offsets[index].width, index: index)
@@ -60,7 +61,7 @@ struct UsersListView: View {
                 } .onEnded { _ in
                   withAnimation {
                     swipeCard(width: offsets[index].width, index: index)
-//                    changeColor(width: offset.width)
+                    //                    changeColor(width: offset.width)
                   }
                 }
             )
@@ -77,33 +78,33 @@ struct UsersListView: View {
       })
     }
 
-  func changeColor(width: CGFloat, index: Int) {
-    switch width {
-    case -500...(-150):
-      redOpacities[index] = width - 50
-    case 150...500:
-      print(width)
-      var opacity = width / 300
-print("opacity: \(opacity)")
-      print("index: \(index)")
-      redOpacities[profileService.otherUsers.count] = opacity
-    default:
-      redOpacities[index] = 0
+    func changeColor(width: CGFloat, index: Int) {
+      switch width {
+      case -500...(-150):
+        redOpacities[index] = width - 50
+      case 150...500:
+        print(width)
+        var opacity = width / 300
+        print("opacity: \(opacity)")
+        print("index: \(index)")
+        redOpacities[profileService.otherUsers.count] = opacity
+      default:
+        redOpacities[index] = 0
+      }
     }
-  }
 
-  func swipeCard(width: CGFloat, index: Int) {
-    switch width {
-    case -500...(-150):
-      //          print("\(person) removed")
-      offsets[index] = CGSize(width: -500, height: 0)
-    case 150...500:
-      //          print("\(person) added")
-      offsets[index] = CGSize(width: 500, height: 0)
-    default:
-      offsets[index] = .zero
+    func swipeCard(width: CGFloat, index: Int) {
+      switch width {
+      case -500...(-150):
+        //          print("\(person) removed")
+        offsets[index] = CGSize(width: -500, height: 0)
+      case 150...500:
+        //          print("\(person) added")
+        offsets[index] = CGSize(width: 500, height: 0)
+      default:
+        offsets[index] = .zero
+      }
+      profileService.otherUsers.remove(at: index)
     }
-    profileService.otherUsers.remove(at: index)
   }
-}
 
