@@ -12,7 +12,7 @@ struct CreateProfileView: View {
   @Binding var currentStep: OnboardingStep
 
   @State var firstName = ""
-  @State var lastName = ""
+  //@State var lastName = ""
   @State var gender = ""
   @State var age = ""
   @State var occupation = ""
@@ -89,13 +89,13 @@ struct CreateProfileView: View {
             }
 
           // Last name
-          TextField("Last Name", text: $lastName)
-            .textFieldStyle(CreateProfileTextfieldStyle())
-            .placeholder(when: lastName.isEmpty) {
-              Text("Last Name")
-                .foregroundColor(Color("text-textfield"))
-                .font(Font.bodyParagraph)
-            }
+//          TextField("Last Name", text: $lastName)
+//            .textFieldStyle(CreateProfileTextfieldStyle())
+//            .placeholder(when: lastName.isEmpty) {
+//              Text("Last Name")
+//                .foregroundColor(Color("text-textfield"))
+//                .font(Font.bodyParagraph)
+//            }
 
           // Gender
           TextField("Gender", text: $gender)
@@ -165,7 +165,9 @@ struct CreateProfileView: View {
           isErrorLabelVisible = false
 
           // Check that firstname/lastname fields are filled before allowing to save
-          guard !firstName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !lastName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+          guard !firstName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+
+//            guard !firstName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !lastName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
 
             errorMessage = "Please enter in a valid first and last name."
             isErrorLabelVisible = true
@@ -177,7 +179,7 @@ struct CreateProfileView: View {
 
           // Save the data
           DatabaseService().setUserProfile(firstName: firstName,
-                                           lastName: lastName,
+                                     //      lastName: lastName,
                                            gender: gender,
                                            age: age,
                                            occupation: occupation,

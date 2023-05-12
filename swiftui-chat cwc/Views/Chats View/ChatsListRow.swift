@@ -41,7 +41,9 @@ struct ChatsListRow: View {
                     Group {
                         if otherParticipants.count == 1 {
                             
-                            Text("\(participant!.firstname ?? "") \(participant!.lastname ?? "")")
+                            Text("\(participant!.firstname ?? "")")
+
+                      //    Text("\(participant!.firstname ?? "") \(participant!.lastname ?? "")")
                                 
                         }
                         else if otherParticipants.count == 2 {

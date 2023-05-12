@@ -22,9 +22,13 @@ struct ContactRow: View {
             
             VStack (alignment: .leading, spacing: 4) {
                 // Name
-                Text("\(user.firstname ?? "") \(user.lastname ?? "")")
+                Text("\(user.firstname ?? "")")
                     .font(Font.button)
                     .foregroundColor(Color("text-primary"))
+
+//              Text("\(user.firstname ?? "") \(user.lastname ?? "")")
+//                  .font(Font.button)
+//                  .foregroundColor(Color("text-primary"))
                 
                 // Phone number
                 Text(user.phone ?? "")

@@ -82,7 +82,7 @@ class DatabaseService {
         
     }
     
-  func setUserProfile(firstName: String, lastName: String, gender: String, age: String, occupation: String, hobbies: String, bio: String, iAmLookingFor: String, image: UIImage?, completion: @escaping (Bool) -> Void) {
+  func setUserProfile(firstName: String, gender: String, age: String, occupation: String, hobbies: String, bio: String, iAmLookingFor: String, image: UIImage?, completion: @escaping (Bool) -> Void) {
         
         // Ensure that the user is logged in
         guard AuthViewModel.isUserLoggedIn() != false else {
@@ -102,7 +102,7 @@ class DatabaseService {
         let doc = db.collection("users").document(AuthViewModel.getLoggedInUserId())
     doc.setData(["uid": uid,
                  "firstname": firstName,
-                 "lastname": lastName,
+            //     "lastname": lastName,
                  "gender": gender,
                  "age": age,
                  "occupation": occupation,
@@ -433,7 +433,8 @@ class DatabaseService {
         // Run the command
         db.collection("users")
             .document(AuthViewModel.getLoggedInUserId())
-            .setData(["isactive":false, "firstname":"Deleted", "lastname":"User"], merge: true)
+            .setData(["isactive":false, "firstname":"Deleted"], merge: true)
+//            .setData(["isactive":false, "firstname":"Deleted", "lastname":"User"], merge: true)
         { error in
             
             // Check for errors

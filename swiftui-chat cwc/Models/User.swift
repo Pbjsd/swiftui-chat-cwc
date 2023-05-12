@@ -16,7 +16,7 @@ struct User: Codable, Identifiable, Hashable {
     
     var firstname: String?
     
-    var lastname: String?
+  //  var lastname: String?
     
     var phone: String?
     

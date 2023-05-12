@@ -78,7 +78,8 @@ struct ConversationView: View {
                 Group {
                   if participants.count == 1 {
 
-                    Text("\(participant?.firstname ?? "") \(participant?.lastname ?? "")")
+                    Text("\(participant?.firstname ?? "")")
+                //    Text("\(participant?.firstname ?? "") \(participant?.lastname ?? "")")
                   }
                   else if participants.count == 2 {
 
@@ -212,7 +213,11 @@ struct ConversationView: View {
                       // Show a text msg with name
                       ConversationTextMessage(msg: msg.msg,
                                               isFromUser: isFromUser,
-                                              name: "\(userOfMsg?.firstname ?? "") \(userOfMsg?.lastname ?? "")", isActive: userOfMsg?.isactive ?? true)
+                                              name: "\(userOfMsg?.firstname ?? "")", isActive: userOfMsg?.isactive ?? true)
+
+//                      ConversationTextMessage(msg: msg.msg,
+//                                              isFromUser: isFromUser,
+//                                              name: "\(userOfMsg?.firstname ?? "") \(userOfMsg?.lastname ?? "")", isActive: userOfMsg?.isactive ?? true)
                     }
                     else {
                       // Text message with no name

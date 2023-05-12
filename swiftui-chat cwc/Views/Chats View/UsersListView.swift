@@ -15,7 +15,7 @@ struct UsersListView: View {
   @State private var redOpacities = Array(repeating: 0.0, count: 10000)
 
   var body: some View {
-      ZStack {
+    ZStack {
         Text("No more users")
           .font(.caption)
           .foregroundColor(.gray)

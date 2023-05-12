@@ -85,7 +85,7 @@ class ContactsViewModel: ObservableObject {
             
             // Criteria for including this user into filtered users list
             user.firstname?.lowercased().contains(filterText) ?? false ||
-            user.lastname?.lowercased().contains(filterText) ?? false ||
+         //   user.lastname?.lowercased().contains(filterText) ?? false ||
             user.phone?.lowercased().contains(filterText) ?? false
            
         })
