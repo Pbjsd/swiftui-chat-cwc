@@ -13,7 +13,10 @@ struct TabsView: View {
 
     var body: some View {
       TabView {
-        ContactsListView()
+//        MatchesView()
+        NavigationStack {
+          ContactsListView()
+        }
         //Tried to add ChatsListView() above but kept getting errors 
           .tabItem {
             Image(systemName: "message")

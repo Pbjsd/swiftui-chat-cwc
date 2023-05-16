@@ -18,6 +18,12 @@ struct ContactsListView: View {
     var body: some View {
         
         VStack {
+          NavigationLink {
+            MatchesView()
+          } label: {
+            Text("Matches")
+          }
+
             // Heading
             HStack {
                 Text("Contacts")

@@ -9,31 +9,33 @@ import Foundation
 import FirebaseFirestoreSwift
 
 struct User: Codable, Identifiable, Hashable {
-    
-    @DocumentID var id: String?
+
+  @DocumentID var id: String?
 
   var uid: String?
-    
-    var firstname: String?
-    
+
+  var firstname: String?
+
   //  var lastname: String?
-    
-    var phone: String?
-    
-    var photo: String?
-    
-    var isactive: Bool = true
 
-    var gender: String?
+  var phone: String?
 
-    var age: String?
+  var photo: String?
 
-    var occupation: String?
+  var isactive: Bool = true
 
-    var hobbies: String?
+  var gender: String?
 
-    var bio: String?
+  var age: String?
 
-    var iamlookingfor: String?
-    
+  var occupation: String?
+
+  var hobbies: String?
+
+  var bio: String?
+
+  var iamlookingfor: String?
+
 }
+
+
