@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 struct Match: Codable, Firestorable, Hashable, Identifiable {
 
@@ -14,4 +15,5 @@ struct Match: Codable, Firestorable, Hashable, Identifiable {
   var uid: String
   var myUid: String
   var otherUid: String
+  var createdAt: Timestamp
 }

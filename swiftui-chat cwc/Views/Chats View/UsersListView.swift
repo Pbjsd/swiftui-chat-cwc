@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct UsersListView: View {
 
@@ -127,7 +128,7 @@ struct UsersListView: View {
 
   func matched(uid: String) {
     guard let myUid = profileService.currentUser?.uid else { return }
-    let match = Match(uid: "", myUid: myUid, otherUid: uid)
+    let match = Match(uid: "", myUid: myUid, otherUid: uid, createdAt: Timestamp())
     Task {
       do {
         try await FirestoreContext.create(match, collectionPath: "matches")

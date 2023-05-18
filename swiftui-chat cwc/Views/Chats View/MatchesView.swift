@@ -31,9 +31,15 @@ struct MatchesView: View {
   func fetchMatches() {
     guard let myUid = profileService.currentUser?.uid else { return }
     let queryPredicates: [QueryPredicate] = [.isEqualTo("myUid", myUid)]
+    let queryPredicates2: [QueryPredicate] = [.isEqualTo("otherUid", myUid)]
     Task {
       do {
-        matches = try await FirestoreContext.query(collectionPath: "matches", predicates: queryPredicates)
+        let matches1: [Match] = try await FirestoreContext.query(collectionPath: "matches", predicates: queryPredicates)
+        let matches2: [Match] = try await FirestoreContext.query(collectionPath: "matches", predicates: queryPredicates2)
+        let matches = matches1 + matches2
+        self.matches = matches.sorted(by: { m0, m1 in
+          m0.createdAt.dateValue() < m1.createdAt.dateValue()
+        })
       } catch {
         print(error.localizedDescription)
       }

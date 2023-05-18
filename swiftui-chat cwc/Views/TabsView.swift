@@ -15,9 +15,10 @@ struct TabsView: View {
       TabView {
 //        MatchesView()
         NavigationStack {
-          ContactsListView()
+//          ContactsListView()
+          SettingsView(isSettingsShowing: .constant(true), isOnboarding: .constant(false))
         }
-        //Tried to add ChatsListView() above but kept getting errors 
+        //Tried to add ChatsListView() above but kept getting errors
           .tabItem {
             Image(systemName: "message")
           }
